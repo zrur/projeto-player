@@ -1,0 +1,5945 @@
+
+
+Experto en desarrollo móvil con React
+atue como especialista mobile de react
+¡Claro! Como especialista en desarrollo móvil con React, puedo ayudarte con una variedad de temas relacionados con la creación de aplicaciones móviles utilizando tecnologías como React Native, Expo, y otras herramientas asociadas. Aquí tienes algunas áreas en las que puedo asistirte:
+
+1. Configuración de Entorno de Desarrollo
+Configurar React Native en tu máquina (Windows, macOS, Linux).
+
+Usar Expo para desarrollo rápido.
+
+Configurar emuladores (Android Studio, Xcode) o usar dispositivos físicos.
+
+2. Estructura de Proyectos
+Organización de carpetas y archivos.
+
+Uso de herramientas como React Navigation para la navegación.
+
+Integración de estilos con StyleSheet, Styled Components, o librerías como NativeBase o React Native Paper.
+
+3. Componentes y Funcionalidades
+Creación de componentes reutilizables.
+
+Uso de Hooks (useState, useEffect, useContext, etc.).
+
+Manejo de estados globales con Redux, MobX, o Context API.
+
+Integración de APIs REST o GraphQL con Axios, Fetch, o Apollo Client.
+
+4. Acceso a Funcionalidades del Dispositivo
+Uso de la cámara con expo-camera o react-native-camera.
+
+Geolocalización con expo-location o react-native-maps.
+
+Notificaciones push con expo-notifications o Firebase Cloud Messaging.
+
+Almacenamiento local con AsyncStorage o SQLite.
+
+5. Despliegue y Publicación
+Generación de archivos APK (Android) y IPA (iOS).
+
+Publicación en Google Play Store y Apple App Store.
+
+Uso de Fastlane para automatizar el proceso de despliegue.
+
+6. Optimización y Mejores Prácticas
+Mejora del rendimiento de la aplicación.
+
+Reducción del tamaño del bundle.
+
+Uso de Hermes como motor JavaScript.
+
+Pruebas unitarias y de integración con Jest y React Testing Library.
+
+7. Solucionar Problemas Comunes
+Errores de compilación en iOS y Android.
+
+Problemas con dependencias y versiones.
+
+Depuración de aplicaciones con React Native Debugger o Flipper.
+
+8. Integración con Backend y Servicios en la Nube
+Autenticación con Firebase, Auth0, o soluciones personalizadas.
+
+Almacenamiento en la nube con Firebase Storage, AWS S3, etc.
+
+Sincronización de datos en tiempo real con Firebase Firestore o Socket.IO.
+
+9. Tendencias y Librerías Populares
+Animaciones con React Native Reanimated o Lottie.
+
+Uso de React Query para manejo de datos.
+
+Integración de TypeScript para un desarrollo más seguro.
+
+Si tienes alguna pregunta específica, un problema que resolver, o necesitas una guía paso a paso sobre algún tema, ¡no dudes en preguntar! 😊
+
+¿En qué puedo ayudarte hoy? 🚀
+
+me ajude a iniciar o projeto
+Claro! Vou te guiar passo a passo para iniciar um projeto React Native do zero. Vamos configurar o ambiente e criar um projeto básico. Escolha uma das opções abaixo:
+
+Opção 1: Usando Expo (recomendado para iniciantes)
+O Expo é uma ferramenta que facilita o desenvolvimento com React Native, pois abstrai muita complexidade de configuração.
+
+Passos para iniciar:
+Instale o Node.js:
+
+Certifique-se de ter o Node.js instalado. Baixe em nodejs.org.
+
+Instale o Expo CLI:
+
+Abra o terminal e execute:
+
+bash
+Copy
+npm install -g expo-cli
+Crie um novo projeto:
+
+No terminal, execute:
+
+bash
+Copy
+expo init MeuProjeto
+Escolha um template (recomendo o "blank" para começar).
+
+Navegue até a pasta do projeto:
+
+bash
+Copy
+cd MeuProjeto
+Inicie o projeto:
+
+bash
+Copy
+npm start
+Isso abrirá uma interface no navegador com um QR Code.
+
+Execute no seu dispositivo:
+
+Baixe o app Expo Go na Play Store (Android) ou App Store (iOS).
+
+Escaneie o QR Code com o app para ver o projeto rodando no seu celular.
+
+Opção 2: Configuração Manual (React Native CLI)
+Se você prefere mais controle sobre o projeto e precisa de funcionalidades nativas, siga esses passos:
+
+Passos para iniciar:
+Instale o Node.js:
+
+Baixe e instale o Node.js em nodejs.org.
+
+Instale o React Native CLI:
+
+No terminal, execute:
+
+bash
+Copy
+npm install -g react-native-cli
+Instale as dependências para Android e iOS:
+
+Android: Instale o Android Studio e configure o ambiente conforme o guia oficial.
+
+iOS: Certifique-se de ter o Xcode instalado (apenas para macOS).
+
+Crie um novo projeto:
+
+No terminal, execute:
+
+bash
+Copy
+npx react-native init MeuProjeto
+Navegue até a pasta do projeto:
+
+bash
+Copy
+cd MeuProjeto
+Execute o projeto:
+
+Para Android:
+
+bash
+Copy
+npx react-native run-android
+Para iOS:
+
+bash
+Copy
+npx react-native run-ios
+Estrutura Inicial do Projeto
+Após criar o projeto, você verá uma estrutura de pastas semelhante a esta:
+
+Copy
+MeuProjeto/
+├── android/          # Código nativo Android
+├── ios/             # Código nativo iOS
+├── node_modules/    # Dependências instaladas
+├── assets/          # Arquivos estáticos (imagens, fonts, etc.)
+├── src/             # Pasta para o código da aplicação
+│   ├── components/  # Componentes reutilizáveis
+│   ├── screens/     # Telas da aplicação
+│   ├── App.js       # Ponto de entrada da aplicação
+├── package.json     # Dependências e scripts do projeto
+Primeiras Alterações
+Abra o arquivo App.js no seu editor de código.
+
+Substitua o conteúdo por algo simples, como:
+
+javascript
+Copy
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+
+const App = () => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>Olá, Mundo!</Text>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#f0f0f0',
+  },
+  text: {
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+});
+
+export default App;
+Salve o arquivo e veja as mudanças refletidas no seu dispositivo ou emulador.
+
+Próximos Passos
+Adicione navegação com React Navigation.
+
+Integre APIs ou funcionalidades nativas.
+
+Comece a estruturar seu projeto em componentes e telas.
+
+Se precisar de ajuda em qualquer etapa, é só perguntar! 🚀
+
+🎵 React Native Music Player Check Point 🎧
+Bem-vindos ao desafio do Music Player! 🚀 Vocês foram convocados para criar um player de música simples, porém funcional, usando React Native. O objetivo é testar sua capacidade de transformar um problema em uma solução prática e bem estruturada.
+
+Mas atenção! Isso não é só uma prova, é uma missão. E como toda missão, tem regras claras. Vamos lá?
+
+🎯 O que você precisa fazer?
+Seu desafio é criar um app que simula um player de música. Assista ao vídeo de referência (disponível no repositório) para entender exatamente como o app deve funcionar. A partir do vídeo, você deve identificar as funcionalidades necessárias e implementá-las.
+
+Dica: Preste atenção nos detalhes visuais e nas interações do usuário. O layout foi inspirado no Musium - Music App UI, que você pode consultar aqui para referência de cores, espaçamentos e outros detalhes. Mas não se preocupe em replicar tudo pixel a pixel. O importante é que o visual esteja próximo do que foi mostrado no vídeo.
+
+Ah, e não se esqueça: no rodapé do app, deve constar seu RM e nome completo. Isso é obrigatório!
+Okay, the user is asking for help to create a React Native music player app based on a specific design and functionality. Let me break down the requirements and figure out the best approach.
+
+First, they mentioned a reference video and a design inspired by Musium. So the app needs to have a similar UI, but not pixel-perfect. The key features include play/pause, skip tracks, a progress bar, and displaying track info. Also, the footer must have the user's RM and name.
+
+I need to outline the steps. Let's start with setting up the project. Since the user might be familiar with Expo from the previous conversation, recommending Expo again makes sense for simplicity.
+
+Next, the main components: a header, artwork display, track info, progress bar, controls, and footer. For the progress bar, using a View with a dynamic width based on the current time would work. But maybe a library like react-native-slider could offer more features, but keeping it simple with a custom bar might be better for now.
+
+Playback functionality. Since Expo has an Audio API, using expo-av would handle playing the audio. Need to manage the state for playing/pausing, current time, and duration. Using useState and useEffect hooks will be necessary for state management and updating the progress bar.
+
+For the track list, an array of objects with track details. The user can loop through these. Skipping tracks involves changing the current track index and updating the audio source.
+
+Styling is important. The user provided a color palette from Musium, so applying those colors consistently. Using StyleSheet for styles and ensuring the layout is responsive with flexbox.
+
+Testing on both iOS and Android. Make sure touchable components like buttons work on both platforms. Using TouchableOpacity for buttons.
+
+The footer needs to display RM and name, so a simple Text component at the bottom.
+
+Potential issues: Handling async operations with Expo Audio, correctly updating the progress bar without lag. Maybe using setInterval to update the current time every second. Also, ensuring that the app correctly loads the next track and handles the end of a track.
+
+Dependencies: Install expo-av and react-native-vector-icons for the icons. Vector icons are necessary for the play, pause, skip buttons.
+
+Putting it all together, the code structure would have a main App component with state variables, effects for loading the sound, and handlers for play/pause and skip. The UI components are structured in a View with all the sections.
+
+I should also mention possible extensions like adding a playlist, animations, or more features, but focus on the core requirements first. Remind the user to replace placeholder data with their actual tracks and personal info in the footer.
+
+Finally, testing the app on a real device using Expo Go would help catch any issues early. Make sure all the touch interactions are smooth and the audio plays correctly.
+
+(Due to technical issues, the search service is temporarily unavailable.)
+
+Vamos criar esse player de música juntos! 🚀 Segue um guia estruturado para implementação:
+
+📋 Requisitos Principais (Baseado no Vídeo)
+UI Principal
+
+Capa do álbum animada
+
+Controles de play/pause
+
+Botões de próxima/anterior
+
+Barra de progresso da música
+
+Exibição de tempo decorrido/total
+
+Nome da música e artista
+
+Funcionalidades
+
+Play/Pause com animação
+
+Progresso atualizado em tempo real
+
+Troca de faixas
+
+Gestos para controle (opcional)
+
+Design
+
+Paleta de cores similar ao Musium
+
+Layout responsivo
+
+Animações suaves
+
+Footer com RM e nome
+
+🛠️ Implementação Base
+javascript
+Copy
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { Audio } from 'expo-av';
+
+const MusicPlayer = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [totalDuration, setTotalDuration] = useState(0);
+  const [sound, setSound] = useState(null);
+
+  // Lista de músicas de exemplo
+  const tracks = [
+    {
+      id: 1,
+      title: 'Bohemian Rhapsody',
+      artist: 'Queen',
+      artwork: 'https://example.com/cover1.jpg',
+      url: require('./assets/musics/song1.mp3'),
+    },
+    // Adicione mais músicas
+  ];
+
+  const [currentTrack, setCurrentTrack] = useState(0);
+
+  useEffect(() => {
+    (async () => {
+      const { sound } = await Audio.Sound.createAsync(
+        tracks[currentTrack].url,
+        { shouldPlay: false }
+      );
+      setSound(sound);
+    })();
+
+    return () => {
+      if (sound) {
+        sound.unloadAsync();
+      }
+    };
+  }, [currentTrack]);
+
+  const togglePlayback = async () => {
+    if (!sound) return;
+
+    if (isPlaying) {
+      await sound.pauseAsync();
+    } else {
+      await sound.playAsync();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  const skipToNext = () => {
+    setCurrentTrack((prev) => (prev + 1) % tracks.length);
+  };
+
+  const skipToPrevious = () => {
+    setCurrentTrack((prev) => (prev - 1 + tracks.length) % tracks.length);
+  };
+
+  return (
+    <View style={styles.container}>
+      {/* Área do Álbum */}
+      <Image 
+        source={{ uri: tracks[currentTrack].artwork }} 
+        style={styles.albumArt}
+      />
+
+      {/* Informações da Música */}
+      <View style={styles.trackInfo}>
+        <Text style={styles.title}>{tracks[currentTrack].title}</Text>
+        <Text style={styles.artist}>{tracks[currentTrack].artist}</Text>
+      </View>
+
+      {/* Barra de Progresso */}
+      <View style={styles.progressContainer}>
+        <Text style={styles.timeText}>
+          {new Date(currentTime * 1000).toISOString().substr(14, 5)}
+        </Text>
+        <View style={styles.progressBar}>
+          <View style={[styles.progress, { width: `${(currentTime / totalDuration) * 100}%` }]} />
+        </View>
+        <Text style={styles.timeText}>
+          {new Date(totalDuration * 1000).toISOString().substr(14, 5)}
+        </Text>
+      </View>
+
+      {/* Controles */}
+      <View style={styles.controls}>
+        <TouchableOpacity onPress={skipToPrevious}>
+          <Ionicons name="play-skip-back" size={32} color="#fff" />
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={togglePlayback} style={styles.playButton}>
+          <Ionicons 
+            name={isPlaying ? "pause" : "play"} 
+            size={48} 
+            color="#fff" 
+          />
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={skipToNext}>
+          <Ionicons name="play-skip-forward" size={32} color="#fff" />
+        </TouchableOpacity>
+      </View>
+
+      {/* Footer */}
+      <Text style={styles.footer}>RM12345 - Seu Nome Completo</Text>
+    </View>
+  );
+};
+
+// Estilos baseados no Musium UI
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#1a1a1a',
+    alignItems: 'center',
+    padding: 20,
+  },
+  albumArt: {
+    width: 300,
+    height: 300,
+    borderRadius: 20,
+    marginVertical: 30,
+  },
+  trackInfo: {
+    alignItems: 'center',
+    marginBottom: 30,
+  },
+  title: {
+    color: '#fff',
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  artist: {
+    color: '#888',
+    fontSize: 18,
+  },
+  progressContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '100%',
+    marginBottom: 30,
+  },
+  progressBar: {
+    flex: 1,
+    height: 3,
+    backgroundColor: '#444',
+    marginHorizontal: 10,
+  },
+  progress: {
+    height: '100%',
+    backgroundColor: '#1DB954',
+  },
+  controls: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '80%',
+  },
+  playButton: {
+    backgroundColor: '#1DB954',
+    padding: 20,
+    borderRadius: 50,
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 20,
+    color: '#888',
+    fontSize: 12,
+  },
+});
+
+export default MusicPlayer;
+🔧 Dependências Necessárias
+bash
+Copy
+expo install expo-av react-native-vector-icons
+🎨 Paleta de Cores Sugerida (Musium Style)
+Fundo: #1a1a1a
+
+Texto Primário: #ffffff
+
+Texto Secundário: #888888
+
+Botão Play: #1DB954
+
+Barra de Progresso: #444444
+
+💡 Melhorias Possíveis
+Implementar gestos para:
+
+Arrastar a barra de progresso
+
+Swipe para trocar de faixa
+
+Adicionar animações com react-native-reanimated
+
+Sistema de playlist
+
+Modo offline com armazenamento local
+
+Equalizador visual
+
+Controle por notificação do sistema
+
+⚠️ Pontos de Atenção
+Não esqueça de substituir:
+
+URLs das capas dos álbuns
+
+Arquivos de áudio locais
+
+RM e nome no footer
+
+Teste em ambos os sistemas (Android/iOS)
+
+Cuide do ciclo de vida do áudio (pause ao fechar app)
+
+Precisa de ajuda com alguma funcionalidade específica ou ajustes no layout? 😊
+
+como que eu começo? faca um passo a passo
+Vamos começar do zero! Aqui está um passo a passo detalhado para criar o projeto do Music Player em React Native:
+
+🛠️ Passo 1: Configuração do Ambiente
+Instale o Node.js:
+
+Baixe e instale o Node.js em nodejs.org.
+
+Instale o Expo CLI:
+
+Abra o terminal e execute:
+
+bash
+Copy
+npm install -g expo-cli
+Verifique a instalação:
+
+Execute:
+
+bash
+Copy
+expo --version
+Se aparecer a versão, está tudo certo!
+
+🚀 Passo 2: Criar o Projeto
+Crie um novo projeto:
+
+No terminal, execute:
+
+bash
+Copy
+expo init MusicPlayerApp
+Escolha o template "blank" (é o mais simples para começar).
+
+Navegue até a pasta do projeto:
+
+bash
+Copy
+cd MusicPlayerApp
+Instale as dependências necessárias:
+
+Execute:
+
+bash
+Copy
+expo install expo-av react-native-vector-icons
+O expo-av é para reprodução de áudio, e o react-native-vector-icons é para os ícones dos controles.
+
+📂 Passo 3: Estrutura do Projeto
+Crie uma estrutura de pastas:
+
+Dentro da pasta MusicPlayerApp, organize assim:
+
+Copy
+MusicPlayerApp/
+├── assets/
+│   ├── musics/          # Coloque seus arquivos de áudio aqui
+│   └── images/          # Imagens (como capas de álbum)
+├── components/          # Componentes reutilizáveis
+├── screens/             # Telas da aplicação
+└── App.js               # Ponto de entrada
+Adicione arquivos de áudio e imagens:
+
+Coloque suas músicas na pasta assets/musics/.
+
+Coloque as capas dos álbuns na pasta assets/images/.
+
+🎨 Passo 4: Implementar o Player
+Abra o arquivo App.js:
+
+Substitua o conteúdo pelo código do Music Player que forneci anteriormente.
+
+Atualize as informações das músicas:
+
+No array tracks, substitua os dados pelas suas músicas:
+
+javascript
+Copy
+const tracks = [
+  {
+    id: 1,
+    title: 'Nome da Música',
+    artist: 'Nome do Artista',
+    artwork: require('./assets/images/cover1.jpg'), // Caminho da imagem
+    url: require('./assets/musics/song1.mp3'),      // Caminho do áudio
+  },
+  // Adicione mais músicas
+];
+Atualize o footer:
+
+No final do arquivo App.js, substitua o texto do footer pelo seu RM e nome:
+
+javascript
+Copy
+<Text style={styles.footer}>RM12345 - Seu Nome Completo</Text>
+▶️ Passo 5: Executar o Projeto
+Inicie o servidor de desenvolvimento:
+
+No terminal, execute:
+
+bash
+Copy
+npm start
+Isso abrirá uma interface no navegador com um QR Code.
+
+Execute no seu dispositivo:
+
+Baixe o app Expo Go na Play Store (Android) ou App Store (iOS).
+
+Escaneie o QR Code com o app para ver o projeto rodando no seu celular.
+
+🎯 Passo 6: Testar e Ajustar
+Teste as funcionalidades:
+
+Verifique se o play/pause funciona.
+
+Teste a troca de faixas.
+
+Confira se o tempo da música está sendo atualizado.
+
+Ajuste o layout:
+
+Personalize as cores, fontes e espaçamentos no arquivo styles.
+
+Adicione animações (opcional):
+
+Use a biblioteca react-native-reanimated para animar a capa do álbum ou a barra de progresso.
+
+📦 Passo 7: Próximos Passos
+Adicionar mais funcionalidades:
+
+Implementar gestos para controle.
+
+Adicionar uma lista de músicas.
+
+Criar um sistema de playlists.
+
+Publicar o app:
+
+Siga o guia do Expo para publicar na Play Store e App Store.
+
+🚨 Dicas Importantes
+Teste em dispositivos reais: Sempre teste no seu celular para garantir que tudo funciona como esperado.
+
+Organize o código: Divida o código em componentes reutilizáveis para facilitar a manutenção.
+
+Documente o projeto: Adicione comentários no código para explicar o que cada parte faz.
+
+Pronto! Agora você tem um player de música funcional em React Native. 🎉
+Se precisar de ajuda em alguma etapa ou quiser implementar algo específico, é só perguntar! 😊
+
+n precisa ter o audio so a pagina estatica
+Ah, entendi! Se o objetivo é criar apenas uma página estática do Music Player, sem a funcionalidade de reprodução de áudio, podemos simplificar bastante o projeto. Vou te guiar passo a passo para criar uma interface estática, focando no layout e no design.
+
+🛠️ Passo 1: Configuração do Projeto
+Crie um novo projeto com Expo:
+
+No terminal, execute:
+
+bash
+Copy
+expo init MusicPlayerStatic
+Escolha o template "blank".
+
+Navegue até a pasta do projeto:
+
+bash
+Copy
+cd MusicPlayerStatic
+Instale as dependências necessárias:
+
+Vamos usar o react-native-vector-icons para os ícones dos controles:
+
+bash
+Copy
+expo install react-native-vector-icons
+🎨 Passo 2: Estrutura do Projeto
+Crie uma estrutura de pastas:
+
+Dentro da pasta MusicPlayerStatic, organize assim:
+
+Copy
+MusicPlayerStatic/
+├── assets/
+│   └── images/          # Coloque as imagens (capa do álbum)
+├── components/          # Componentes reutilizáveis
+├── screens/             # Telas da aplicação
+└── App.js               # Ponto de entrada
+Adicione a capa do álbum:
+
+Coloque uma imagem de capa de álbum na pasta assets/images/. Por exemplo, cover1.jpg.
+
+📄 Passo 3: Implementar a Página Estática
+Abra o arquivo App.js:
+
+Substitua o conteúdo pelo código abaixo:
+
+javascript
+Copy
+import React from 'react';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+
+const MusicPlayerStatic = () => {
+  return (
+    <View style={styles.container}>
+      {/* Capa do Álbum */}
+      <Image 
+        source={require('./assets/images/cover1.jpg')} 
+        style={styles.albumArt}
+      />
+
+      {/* Informações da Música */}
+      <View style={styles.trackInfo}>
+        <Text style={styles.title}>Bohemian Rhapsody</Text>
+        <Text style={styles.artist}>Queen</Text>
+      </View>
+
+      {/* Barra de Progresso (Estática) */}
+      <View style={styles.progressContainer}>
+        <Text style={styles.timeText}>2:30</Text>
+        <View style={styles.progressBar}>
+          <View style={styles.progress} />
+        </View>
+        <Text style={styles.timeText}>4:15</Text>
+      </View>
+
+      {/* Controles (Estáticos) */}
+      <View style={styles.controls}>
+        <TouchableOpacity>
+          <Ionicons name="play-skip-back" size={32} color="#fff" />
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.playButton}>
+          <Ionicons name="play" size={48} color="#fff" />
+        </TouchableOpacity>
+
+        <TouchableOpacity>
+          <Ionicons name="play-skip-forward" size={32} color="#fff" />
+        </TouchableOpacity>
+      </View>
+
+      {/* Footer */}
+      <Text style={styles.footer}>RM12345 - Seu Nome Completo</Text>
+    </View>
+  );
+};
+
+// Estilos
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#1a1a1a',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  albumArt: {
+    width: 300,
+    height: 300,
+    borderRadius: 20,
+    marginBottom: 30,
+  },
+  trackInfo: {
+    alignItems: 'center',
+    marginBottom: 30,
+  },
+  title: {
+    color: '#fff',
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  artist: {
+    color: '#888',
+    fontSize: 18,
+  },
+  progressContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '100%',
+    marginBottom: 30,
+  },
+  progressBar: {
+    flex: 1,
+    height: 3,
+    backgroundColor: '#444',
+    marginHorizontal: 10,
+  },
+  progress: {
+    width: '50%', // Progresso estático (50%)
+    height: '100%',
+    backgroundColor: '#1DB954',
+  },
+  timeText: {
+    color: '#888',
+    fontSize: 14,
+  },
+  controls: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '80%',
+  },
+  playButton: {
+    backgroundColor: '#1DB954',
+    padding: 20,
+    borderRadius: 50,
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 20,
+    color: '#888',
+    fontSize: 12,
+  },
+});
+
+export default MusicPlayerStatic;
+🎯 Passo 4: Personalização
+Altere as informações da música:
+
+No código acima, substitua:
+
+Bohemian Rhapsody pelo nome da música.
+
+Queen pelo nome do artista.
+
+require('./assets/images/cover1.jpg') pelo caminho da sua imagem.
+
+Atualize o footer:
+
+No final do arquivo App.js, substitua o texto do footer pelo seu RM e nome:
+
+javascript
+Copy
+<Text style={styles.footer}>RM12345 - Seu Nome Completo</Text>
+▶️ Passo 5: Executar o Projeto
+Inicie o servidor de desenvolvimento:
+
+No terminal, execute:
+
+bash
+Copy
+npm start
+Isso abrirá uma interface no navegador com um QR Code.
+
+Execute no seu dispositivo:
+
+Baixe o app Expo Go na Play Store (Android) ou App Store (iOS).
+
+Escaneie o QR Code com o app para ver o projeto rodando no seu celular.
+
+🖼️ Resultado Esperado
+Você verá uma interface estática do Music Player com:
+
+Capa do álbum.
+
+Nome da música e artista.
+
+Barra de progresso estática.
+
+Controles de play, próximo e anterior.
+
+Footer com seu RM e nome.
+
+🚀 Próximos Passos (Opcional)
+Se quiser evoluir o projeto, você pode:
+
+Adicionar animações com react-native-reanimated.
+
+Criar uma lista de músicas estáticas.
+
+Implementar gestos para interação (como arrastar a barra de progresso).
+
+Precisa de ajuda com algo específico? É só perguntar! 😊
+
+é tsx
+Ah, entendi! Você quer a versão do código em TypeScript (TSX). Vou adaptar o projeto estático do Music Player para TypeScript. Vamos lá!
+
+🛠️ Passo 1: Configuração do Projeto com TypeScript
+Crie um novo projeto com Expo e TypeScript:
+
+No terminal, execute:
+
+bash
+Copy
+expo init MusicPlayerTSX
+Escolha o template "blank (TypeScript)".
+
+Navegue até a pasta do projeto:
+
+bash
+Copy
+cd MusicPlayerTSX
+Instale as dependências necessárias:
+
+Vamos usar o react-native-vector-icons para os ícones dos controles:
+
+bash
+Copy
+expo install react-native-vector-icons
+🎨 Passo 2: Estrutura do Projeto
+Crie uma estrutura de pastas:
+
+Dentro da pasta MusicPlayerTSX, organize assim:
+
+Copy
+MusicPlayerTSX/
+├── assets/
+│   └── images/          # Coloque as imagens (capa do álbum)
+├── components/          # Componentes reutilizáveis
+├── screens/             # Telas da aplicação
+└── App.tsx              # Ponto de entrada (agora é .tsx)
+Adicione a capa do álbum:
+
+Coloque uma imagem de capa de álbum na pasta assets/images/. Por exemplo, cover1.jpg.
+
+📄 Passo 3: Implementar a Página Estática em TSX
+Abra o arquivo App.tsx:
+
+Substitua o conteúdo pelo código abaixo:
+
+tsx
+Copy
+import React from 'react';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+
+const MusicPlayerStatic: React.FC = () => {
+  return (
+    <View style={styles.container}>
+      {/* Capa do Álbum */}
+      <Image 
+        source={require('./assets/images/cover1.jpg')} 
+        style={styles.albumArt}
+      />
+
+      {/* Informações da Música */}
+      <View style={styles.trackInfo}>
+        <Text style={styles.title}>Bohemian Rhapsody</Text>
+        <Text style={styles.artist}>Queen</Text>
+      </View>
+
+      {/* Barra de Progresso (Estática) */}
+      <View style={styles.progressContainer}>
+        <Text style={styles.timeText}>2:30</Text>
+        <View style={styles.progressBar}>
+          <View style={styles.progress} />
+        </View>
+        <Text style={styles.timeText}>4:15</Text>
+      </View>
+
+      {/* Controles (Estáticos) */}
+      <View style={styles.controls}>
+        <TouchableOpacity>
+          <Ionicons name="play-skip-back" size={32} color="#fff" />
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.playButton}>
+          <Ionicons name="play" size={48} color="#fff" />
+        </TouchableOpacity>
+
+        <TouchableOpacity>
+          <Ionicons name="play-skip-forward" size={32} color="#fff" />
+        </TouchableOpacity>
+      </View>
+
+      {/* Footer */}
+      <Text style={styles.footer}>RM12345 - Seu Nome Completo</Text>
+    </View>
+  );
+};
+
+// Estilos
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#1a1a1a',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  albumArt: {
+    width: 300,
+    height: 300,
+    borderRadius: 20,
+    marginBottom: 30,
+  },
+  trackInfo: {
+    alignItems: 'center',
+    marginBottom: 30,
+  },
+  title: {
+    color: '#fff',
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  artist: {
+    color: '#888',
+    fontSize: 18,
+  },
+  progressContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '100%',
+    marginBottom: 30,
+  },
+  progressBar: {
+    flex: 1,
+    height: 3,
+    backgroundColor: '#444',
+    marginHorizontal: 10,
+  },
+  progress: {
+    width: '50%', // Progresso estático (50%)
+    height: '100%',
+    backgroundColor: '#1DB954',
+  },
+  timeText: {
+    color: '#888',
+    fontSize: 14,
+  },
+  controls: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '80%',
+  },
+  playButton: {
+    backgroundColor: '#1DB954',
+    padding: 20,
+    borderRadius: 50,
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 20,
+    color: '#888',
+    fontSize: 12,
+  },
+});
+
+export default MusicPlayerStatic;
+🎯 Passo 4: Personalização
+Altere as informações da música:
+
+No código acima, substitua:
+
+Bohemian Rhapsody pelo nome da música.
+
+Queen pelo nome do artista.
+
+require('./assets/images/cover1.jpg') pelo caminho da sua imagem.
+
+Atualize o footer:
+
+No final do arquivo App.tsx, substitua o texto do footer pelo seu RM e nome:
+
+tsx
+Copy
+<Text style={styles.footer}>RM12345 - Seu Nome Completo</Text>
+▶️ Passo 5: Executar o Projeto
+Inicie o servidor de desenvolvimento:
+
+No terminal, execute:
+
+bash
+Copy
+npm start
+Isso abrirá uma interface no navegador com um QR Code.
+
+Execute no seu dispositivo:
+
+Baixe o app Expo Go na Play Store (Android) ou App Store (iOS).
+
+Escaneie o QR Code com o app para ver o projeto rodando no seu celular.
+
+🖼️ Resultado Esperado
+Você verá uma interface estática do Music Player com:
+
+Capa do álbum.
+
+Nome da música e artista.
+
+Barra de progresso estática.
+
+Controles de play, próximo e anterior.
+
+Footer com seu RM e nome.
+
+🚀 Próximos Passos (Opcional)
+Se quiser evoluir o projeto, você pode:
+
+Adicionar animações com react-native-reanimated.
+
+Criar uma lista de músicas estáticas.
+
+Implementar gestos para interação (como arrastar a barra de progresso).
+
+Precisa de ajuda com algo específico? É só perguntar! 😊
+
+quero Implementar gestos para interação (como arrastar a barra de progresso),  e colocar mais musicas para o lado
+Vamos implementar gestos para arrastar a barra de progresso e adicionar uma lista de músicas lateral que pode ser rolada horizontalmente. Para isso, usaremos a biblioteca react-native-gesture-handler para os gestos e um ScrollView horizontal para a lista de músicas.
+
+🛠️ Passo 1: Instalar Dependências
+Instale as bibliotecas necessárias:
+
+No terminal, execute:
+
+bash
+Copy
+expo install react-native-gesture-handler react-native-reanimated
+Essas bibliotecas são essenciais para gestos e animações.
+
+Configure o react-native-gesture-handler:
+
+No topo do arquivo App.tsx, adicione:
+
+tsx
+Copy
+import 'react-native-gesture-handler';
+🎯 Passo 2: Implementar Gestos na Barra de Progresso
+Vamos usar o PanGestureHandler do react-native-gesture-handler para permitir que o usuário arraste a barra de progresso.
+
+Atualize o código da barra de progresso:
+
+Substitua a barra de progresso estática por uma versão interativa.
+
+tsx
+Copy
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { PanGestureHandler, State } from 'react-native-gesture-handler';
+import Animated, { useSharedValue, useAnimatedStyle, withSpring } from 'react-native-reanimated';
+
+const MusicPlayerStatic: React.FC = () => {
+  const [progress, setProgress] = useState(0.5); // Progresso inicial (50%)
+  const progressWidth = useSharedValue(150); // Largura inicial da barra de progresso
+
+  const onGestureEvent = (event: any) => {
+    if (event.nativeEvent.state === State.ACTIVE) {
+      const newWidth = Math.max(0, Math.min(300, event.nativeEvent.translationX + 150)); // Limita o valor entre 0 e 300
+      progressWidth.value = newWidth;
+      setProgress(newWidth / 300); // Atualiza o progresso (0 a 1)
+    }
+  };
+
+  const progressStyle = useAnimatedStyle(() => {
+    return {
+      width: withSpring(progressWidth.value, { damping: 10, stiffness: 100 }), // Animação suave
+    };
+  });
+
+  return (
+    <View style={styles.container}>
+      {/* Capa do Álbum */}
+      <Image 
+        source={require('./assets/images/cover1.jpg')} 
+        style={styles.albumArt}
+      />
+
+      {/* Informações da Música */}
+      <View style={styles.trackInfo}>
+        <Text style={styles.title}>Bohemian Rhapsody</Text>
+        <Text style={styles.artist}>Queen</Text>
+      </View>
+
+      {/* Barra de Progresso Interativa */}
+      <View style={styles.progressContainer}>
+        <Text style={styles.timeText}>2:30</Text>
+        <View style={styles.progressBar}>
+          <PanGestureHandler onGestureEvent={onGestureEvent}>
+            <Animated.View style={[styles.progress, progressStyle]} />
+          </PanGestureHandler>
+        </View>
+        <Text style={styles.timeText}>4:15</Text>
+      </View>
+
+      {/* Controles (Estáticos) */}
+      <View style={styles.controls}>
+        <TouchableOpacity>
+          <Ionicons name="play-skip-back" size={32} color="#fff" />
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.playButton}>
+          <Ionicons name="play" size={48} color="#fff" />
+        </TouchableOpacity>
+
+        <TouchableOpacity>
+          <Ionicons name="play-skip-forward" size={32} color="#fff" />
+        </TouchableOpacity>
+      </View>
+
+      {/* Lista de Músicas */}
+      <ScrollView horizontal style={styles.musicList}>
+        {[1, 2, 3, 4, 5].map((item) => (
+          <TouchableOpacity key={item} style={styles.musicItem}>
+            <Image 
+              source={require('./assets/images/cover1.jpg')} 
+              style={styles.musicThumbnail}
+            />
+            <Text style={styles.musicTitle}>Música {item}</Text>
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
+
+      {/* Footer */}
+      <Text style={styles.footer}>RM12345 - Seu Nome Completo</Text>
+    </View>
+  );
+};
+
+// Estilos
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#1a1a1a',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  albumArt: {
+    width: 300,
+    height: 300,
+    borderRadius: 20,
+    marginBottom: 30,
+  },
+  trackInfo: {
+    alignItems: 'center',
+    marginBottom: 30,
+  },
+  title: {
+    color: '#fff',
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  artist: {
+    color: '#888',
+    fontSize: 18,
+  },
+  progressContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '100%',
+    marginBottom: 30,
+  },
+  progressBar: {
+    flex: 1,
+    height: 3,
+    backgroundColor: '#444',
+    marginHorizontal: 10,
+  },
+  progress: {
+    height: '100%',
+    backgroundColor: '#1DB954',
+  },
+  timeText: {
+    color: '#888',
+    fontSize: 14,
+  },
+  controls: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '80%',
+  },
+  playButton: {
+    backgroundColor: '#1DB954',
+    padding: 20,
+    borderRadius: 50,
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 20,
+    color: '#888',
+    fontSize: 12,
+  },
+  musicList: {
+    position: 'absolute',
+    bottom: 80,
+    height: 100,
+  },
+  musicItem: {
+    alignItems: 'center',
+    marginHorizontal: 10,
+  },
+  musicThumbnail: {
+    width: 80,
+    height: 80,
+    borderRadius: 10,
+  },
+  musicTitle: {
+    color: '#fff',
+    fontSize: 14,
+    marginTop: 5,
+  },
+});
+
+export default MusicPlayerStatic;
+🎯 Passo 3: Explicação das Novas Funcionalidades
+Barra de Progresso Interativa:
+
+Usamos o PanGestureHandler para detectar gestos de arrastar.
+
+O Animated.View anima a largura da barra de progresso com base no gesto do usuário.
+
+O valor do progresso é atualizado em tempo real.
+
+Lista de Músicas Lateral:
+
+Usamos um ScrollView horizontal para exibir uma lista de músicas.
+
+Cada item da lista contém uma thumbnail e o nome da música.
+
+A lista pode ser rolada horizontalmente.
+
+▶️ Passo 4: Executar o Projeto
+Inicie o servidor de desenvolvimento:
+
+No terminal, execute:
+
+bash
+Copy
+npm start
+Isso abrirá uma interface no navegador com um QR Code.
+
+Execute no seu dispositivo:
+
+Baixe o app Expo Go na Play Store (Android) ou App Store (iOS).
+
+Escaneie o QR Code com o app para ver o projeto rodando no seu celular.
+
+🖼️ Resultado Esperado
+A barra de progresso agora pode ser arrastada para ajustar o tempo da música.
+
+A lista de músicas aparece na parte inferior e pode ser rolada horizontalmente.
+
+🚀 Próximos Passos (Opcional)
+Adicionar funcionalidade de troca de música:
+
+Ao clicar em um item da lista, troque a música atual.
+
+Melhorar as animações:
+
+Use react-native-reanimated para animações mais complexas.
+
+Integrar com um backend:
+
+Carregue as músicas e capas de álbuns dinamicamente.
+
+Precisa de ajuda com algo específico? É só perguntar! 😊
+
+(NOBRIDGE) ERROR  Warning: Error: PanGestureHandler must be used as a descendant of GestureHandlerRootView. Otherwise the gestures will not be recognized. See https://docs.swmansion.com/react-native-gesture-handler/docs/installation for more details.
+
+This error is located at:
+    in PanGestureHandler (created by MusicPlayerStatic)
+    in RCTView (created by View)
+    in View (created by MusicPlayerStatic)
+    in RCTView (created by View)
+    in View (created by MusicPlayerStatic)
+    in RCTView (created by View)
+    in View (created by MusicPlayerStatic)
+    in MusicPlayerStatic (created by withDevTools(MusicPlayerStatic))
+    in withDevTools(MusicPlayerStatic)
+    in RCTView (created by View)
+    in View (created by AppContainer)
+    in RCTView (created by View)
+    in View (created by AppContainer)
+    in AppContainer
+    in main(RootComponent)
+ (NOBRIDGE) ERROR  Warning: Error: PanGestureHandler must be used as a descendant of GestureHandlerRootView. Otherwise the gestures will not be recognized. See https://docs.swmansion.com/react-native-gesture-handler/docs/installation for more details.
+
+This error is located at:
+    in PanGestureHandler (created by MusicPlayerStatic)
+    in RCTView (created by View)
+    in View (created by MusicPlayerStatic)
+    in RCTView (created by View)
+    in View (created by MusicPlayerStatic)
+    in RCTView (created by View)
+    in View (created by MusicPlayerStatic)
+    in MusicPlayerStatic (created by withDevTools(MusicPlayerStatic))
+    in withDevTools(MusicPlayerStatic)
+    in RCTView (created by View)
+    in View (created by AppContainer)
+    in RCTView (created by View)
+    in View (created by AppContainer)
+    in AppContainer
+    in main(RootComponent)
+Esse erro ocorre porque o PanGestureHandler precisa estar dentro de um GestureHandlerRootView para funcionar corretamente. Vamos corrigir isso!
+
+🛠️ Passo 1: Adicionar o GestureHandlerRootView
+Importe o GestureHandlerRootView:
+
+No topo do arquivo App.tsx, adicione:
+
+tsx
+Copy
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+Envolva o conteúdo do aplicativo com GestureHandlerRootView:
+
+Substitua o View principal do seu componente por GestureHandlerRootView.
+
+Aqui está o código atualizado:
+
+tsx
+Copy
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { PanGestureHandler, State, GestureHandlerRootView } from 'react-native-gesture-handler';
+import Animated, { useSharedValue, useAnimatedStyle, withSpring } from 'react-native-reanimated';
+
+const MusicPlayerStatic: React.FC = () => {
+  const [progress, setProgress] = useState(0.5); // Progresso inicial (50%)
+  const progressWidth = useSharedValue(150); // Largura inicial da barra de progresso
+
+  const onGestureEvent = (event: any) => {
+    if (event.nativeEvent.state === State.ACTIVE) {
+      const newWidth = Math.max(0, Math.min(300, event.nativeEvent.translationX + 150)); // Limita o valor entre 0 e 300
+      progressWidth.value = newWidth;
+      setProgress(newWidth / 300); // Atualiza o progresso (0 a 1)
+    }
+  };
+
+  const progressStyle = useAnimatedStyle(() => {
+    return {
+      width: withSpring(progressWidth.value, { damping: 10, stiffness: 100 }), // Animação suave
+    };
+  });
+
+  return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <View style={styles.container}>
+        {/* Capa do Álbum */}
+        <Image 
+          source={require('./assets/images/cover1.jpg')} 
+          style={styles.albumArt}
+        />
+
+        {/* Informações da Música */}
+        <View style={styles.trackInfo}>
+          <Text style={styles.title}>Bohemian Rhapsody</Text>
+          <Text style={styles.artist}>Queen</Text>
+        </View>
+
+        {/* Barra de Progresso Interativa */}
+        <View style={styles.progressContainer}>
+          <Text style={styles.timeText}>2:30</Text>
+          <View style={styles.progressBar}>
+            <PanGestureHandler onGestureEvent={onGestureEvent}>
+              <Animated.View style={[styles.progress, progressStyle]} />
+            </PanGestureHandler>
+          </View>
+          <Text style={styles.timeText}>4:15</Text>
+        </View>
+
+        {/* Controles (Estáticos) */}
+        <View style={styles.controls}>
+          <TouchableOpacity>
+            <Ionicons name="play-skip-back" size={32} color="#fff" />
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.playButton}>
+            <Ionicons name="play" size={48} color="#fff" />
+          </TouchableOpacity>
+
+          <TouchableOpacity>
+            <Ionicons name="play-skip-forward" size={32} color="#fff" />
+          </TouchableOpacity>
+        </View>
+
+        {/* Lista de Músicas */}
+        <ScrollView horizontal style={styles.musicList}>
+          {[1, 2, 3, 4, 5].map((item) => (
+            <TouchableOpacity key={item} style={styles.musicItem}>
+              <Image 
+                source={require('./assets/images/cover1.jpg')} 
+                style={styles.musicThumbnail}
+              />
+              <Text style={styles.musicTitle}>Música {item}</Text>
+            </TouchableOpacity>
+          ))}
+        </ScrollView>
+
+        {/* Footer */}
+        <Text style={styles.footer}>RM12345 - Seu Nome Completo</Text>
+      </View>
+    </GestureHandlerRootView>
+  );
+};
+
+// Estilos
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#1a1a1a',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  albumArt: {
+    width: 300,
+    height: 300,
+    borderRadius: 20,
+    marginBottom: 30,
+  },
+  trackInfo: {
+    alignItems: 'center',
+    marginBottom: 30,
+  },
+  title: {
+    color: '#fff',
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  artist: {
+    color: '#888',
+    fontSize: 18,
+  },
+  progressContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '100%',
+    marginBottom: 30,
+  },
+  progressBar: {
+    flex: 1,
+    height: 3,
+    backgroundColor: '#444',
+    marginHorizontal: 10,
+  },
+  progress: {
+    height: '100%',
+    backgroundColor: '#1DB954',
+  },
+  timeText: {
+    color: '#888',
+    fontSize: 14,
+  },
+  controls: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '80%',
+  },
+  playButton: {
+    backgroundColor: '#1DB954',
+    padding: 20,
+    borderRadius: 50,
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 20,
+    color: '#888',
+    fontSize: 12,
+  },
+  musicList: {
+    position: 'absolute',
+    bottom: 80,
+    height: 100,
+  },
+  musicItem: {
+    alignItems: 'center',
+    marginHorizontal: 10,
+  },
+  musicThumbnail: {
+    width: 80,
+    height: 80,
+    borderRadius: 10,
+  },
+  musicTitle: {
+    color: '#fff',
+    fontSize: 14,
+    marginTop: 5,
+  },
+});
+
+export default MusicPlayerStatic;
+🎯 Passo 2: O que mudou?
+GestureHandlerRootView:
+
+Envolve todo o conteúdo do aplicativo.
+
+Garante que os gestos funcionem corretamente.
+
+Correção do erro:
+
+O PanGestureHandler agora está dentro de um GestureHandlerRootView, o que resolve o erro.
+
+▶️ Passo 3: Testar o Projeto
+Inicie o servidor de desenvolvimento:
+
+No terminal, execute:
+
+bash
+Copy
+npm start
+Isso abrirá uma interface no navegador com um QR Code.
+
+Execute no seu dispositivo:
+
+Baixe o app Expo Go na Play Store (Android) ou App Store (iOS).
+
+Escaneie o QR Code com o app para ver o projeto rodando no seu celular.
+
+🖼️ Resultado Esperado
+A barra de progresso agora pode ser arrastada sem erros.
+
+A lista de músicas aparece na parte inferior e pode ser rolada horizontalmente.
+
+🚀 Próximos Passos (Opcional)
+Adicionar funcionalidade de troca de música:
+
+Ao clicar em um item da lista, troque a música atual.
+
+Melhorar as animações:
+
+Use react-native-reanimated para animações mais complexas.
+
+Integrar com um backend:
+
+Carregue as músicas e capas de álbuns dinamicamente.
+
+Precisa de ajuda com algo específico? É só perguntar! 😊
+
+n quero isso embaixo de varias imagens faça estilo sportify de trocar a musica troca a capa sem isso embaixo
+Entendi! Você quer um layout mais parecido com o Spotify, onde a troca de música atualiza a capa do álbum e as informações da música, sem a lista de músicas embaixo. Vou te ajudar a criar isso.
+
+Vamos focar em:
+
+Trocar a música manualmente (próxima/anterior).
+
+Atualizar a capa do álbum e as informações conforme a música muda.
+
+Remover a lista de músicas embaixo.
+
+🛠️ Passo 1: Estrutura do Projeto
+Crie um array de músicas:
+
+Cada música terá:
+
+Título
+
+Artista
+
+Capa do álbum
+
+Arquivo de áudio (opcional, já que você quer algo estático).
+
+Use estados para controlar a música atual:
+
+Um estado (currentTrackIndex) para rastrear a música que está tocando.
+
+🎯 Passo 2: Implementar o Player Estático
+Aqui está o código atualizado:
+
+tsx
+Copy
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+
+// Lista de músicas
+const tracks = [
+  {
+    id: 1,
+    title: 'Bohemian Rhapsody',
+    artist: 'Queen',
+    artwork: require('./assets/images/cover1.jpg'),
+  },
+  {
+    id: 2,
+    title: 'Shape of You',
+    artist: 'Ed Sheeran',
+    artwork: require('./assets/images/cover2.jpg'),
+  },
+  {
+    id: 3,
+    title: 'Blinding Lights',
+    artist: 'The Weeknd',
+    artwork: require('./assets/images/cover3.jpg'),
+  },
+  // Adicione mais músicas aqui
+];
+
+const MusicPlayerStatic: React.FC = () => {
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+
+  const currentTrack = tracks[currentTrackIndex];
+
+  const handleNext = () => {
+    setCurrentTrackIndex((prev) => (prev + 1) % tracks.length);
+  };
+
+  const handlePrevious = () => {
+    setCurrentTrackIndex((prev) => (prev - 1 + tracks.length) % tracks.length);
+  };
+
+  return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <View style={styles.container}>
+        {/* Capa do Álbum */}
+        <Image source={currentTrack.artwork} style={styles.albumArt} />
+
+        {/* Informações da Música */}
+        <View style={styles.trackInfo}>
+          <Text style={styles.title}>{currentTrack.title}</Text>
+          <Text style={styles.artist}>{currentTrack.artist}</Text>
+        </View>
+
+        {/* Controles */}
+        <View style={styles.controls}>
+          <TouchableOpacity onPress={handlePrevious}>
+            <Ionicons name="play-skip-back" size={32} color="#fff" />
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.playButton}>
+            <Ionicons name="play" size={48} color="#fff" />
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={handleNext}>
+            <Ionicons name="play-skip-forward" size={32} color="#fff" />
+          </TouchableOpacity>
+        </View>
+
+        {/* Footer */}
+        <Text style={styles.footer}>RM12345 - Seu Nome Completo</Text>
+      </View>
+    </GestureHandlerRootView>
+  );
+};
+
+// Estilos
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#1a1a1a',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  albumArt: {
+    width: 300,
+    height: 300,
+    borderRadius: 20,
+    marginBottom: 30,
+  },
+  trackInfo: {
+    alignItems: 'center',
+    marginBottom: 30,
+  },
+  title: {
+    color: '#fff',
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  artist: {
+    color: '#888',
+    fontSize: 18,
+  },
+  controls: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '80%',
+  },
+  playButton: {
+    backgroundColor: '#1DB954',
+    padding: 20,
+    borderRadius: 50,
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 20,
+    color: '#888',
+    fontSize: 12,
+  },
+});
+
+export default MusicPlayerStatic;
+🎯 Passo 3: Explicação do Código
+Lista de Músicas:
+
+O array tracks contém as informações de cada música (título, artista e capa do álbum).
+
+Estado currentTrackIndex:
+
+Controla qual música está sendo exibida no momento.
+
+Funções handleNext e handlePrevious:
+
+Atualizam o índice da música atual para a próxima ou anterior.
+
+Atualização Dinâmica:
+
+A capa do álbum e as informações da música são atualizadas automaticamente quando o índice muda.
+
+▶️ Passo 4: Executar o Projeto
+Inicie o servidor de desenvolvimento:
+
+No terminal, execute:
+
+bash
+Copy
+npm start
+Isso abrirá uma interface no navegador com um QR Code.
+
+Execute no seu dispositivo:
+
+Baixe o app Expo Go na Play Store (Android) ou App Store (iOS).
+
+Escaneie o QR Code com o app para ver o projeto rodando no seu celular.
+
+🖼️ Resultado Esperado
+A capa do álbum e as informações da música são atualizadas ao trocar de música.
+
+Os botões de próximo e anterior funcionam corretamente.
+
+Layout limpo e focado, sem a lista de músicas embaixo.
+
+🚀 Próximos Passos (Opcional)
+Adicionar animações:
+
+Use react-native-reanimated para animar a transição entre as capas dos álbuns.
+
+Integrar com um backend:
+
+Carregue as músicas e capas de álbuns dinamicamente.
+
+Adicionar funcionalidade de play/pause:
+
+Se quiser tornar o player funcional, integre o expo-av para reprodução de áudio.
+
+Precisa de ajuda com algo específico? É só perguntar! 😊
+
+import { Ionicons } from '@expo/vector-icons';
+import React, { useState } from 'react';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+
+// Lista de músicas
+const tracks = [
+  {
+    id: 1,
+    title: 'QUEM NÃO PODE ERRAR SOU EU',
+    artist: 'Febem, Cersv',
+    artwork: require('./assets/images/capaFebem.jpg'),
+  },
+  {
+    id: 2,
+    title: 'Ai Calica',
+    artist: 'pumapjl, LEALL,Babidi ',
+    artwork: require('./assets/images/capaPumapjl.jpg'),
+  },
+  {
+    id: 3,
+    title: 'Fim de Semana no Parque',
+    artist: 'Racionais MC s',
+    artwork: require('./assets/images/capaRacionais.jpg'),
+  },
+  // Adicione mais músicas aqui
+];
+
+const MusicPlayerStatic: React.FC = () => {
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+
+  const currentTrack = tracks[currentTrackIndex];
+
+  const handleNext = () => {
+    setCurrentTrackIndex((prev) => (prev + 1) % tracks.length);
+  };
+
+  const handlePrevious = () => {
+    setCurrentTrackIndex((prev) => (prev - 1 + tracks.length) % tracks.length);
+  };
+
+  return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <View style={styles.container}>
+        {/* Capa do Álbum */}
+        <Image source={currentTrack.artwork} style={styles.albumArt} />
+
+        {/* Informações da Música */}
+        <View style={styles.trackInfo}>
+          <Text style={styles.title}>{currentTrack.title}</Text>
+          <Text style={styles.artist}>{currentTrack.artist}</Text>
+        </View>
+
+        {/* Controles */}
+        <View style={styles.controls}>
+          <TouchableOpacity onPress={handlePrevious}>
+            <Ionicons name="play-skip-back" size={32} color="#fff" />
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.playButton}>
+            <Ionicons name="play" size={48} color="#fff" />
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={handleNext}>
+            <Ionicons name="play-skip-forward" size={32} color="#fff" />
+          </TouchableOpacity>
+        </View>
+
+        {/* Footer */}
+        <Text style={styles.footer}>RM12345 - Seu Nome Completo</Text>
+      </View>
+    </GestureHandlerRootView>
+  );
+};
+
+// Estilos
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#1a1a1a',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  albumArt: {
+    width: 300,
+    height: 300,
+    borderRadius: 20,
+    marginBottom: 30,
+  },
+  trackInfo: {
+    alignItems: 'center',
+    marginBottom: 30,
+  },
+  title: {
+    color: '#fff',
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  artist: {
+    color: '#888',
+    fontSize: 18,
+  },
+  controls: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '80%',
+  },
+  playButton: {
+    backgroundColor: '#1DB954',
+    padding: 20,
+    borderRadius: 50,
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 20,
+    color: '#888',
+    fontSize: 12,
+  },
+});
+
+export default MusicPlayerStatic; coloque a barra embaixo pra eu mexer sabe os minutos da musica
+Agora vamos adicionar uma barra de progresso interativa embaixo da música, onde você pode arrastar para ajustar o tempo da música. Para isso, usaremos o PanGestureHandler do react-native-gesture-handler e o react-native-reanimated para animações suaves.
+
+🛠️ Passo 1: Adicionar a Barra de Progresso Interativa
+Importe as bibliotecas necessárias:
+
+No topo do arquivo, adicione:
+
+tsx
+Copy
+import { PanGestureHandler } from 'react-native-gesture-handler';
+import Animated, {
+  useSharedValue,
+  useAnimatedStyle,
+  withSpring,
+} from 'react-native-reanimated';
+Crie estados e variáveis para o progresso:
+
+Adicione o seguinte código dentro do componente MusicPlayerStatic:
+
+tsx
+Copy
+const progressWidth = useSharedValue(0); // Largura inicial da barra de progresso
+const [progress, setProgress] = useState(0); // Progresso atual (0 a 1)
+
+const onGestureEvent = (event: any) => {
+  if (event.nativeEvent.state === State.ACTIVE) {
+    const newWidth = Math.max(0, Math.min(300, event.nativeEvent.translationX)); // Limita o valor entre 0 e 300
+    progressWidth.value = newWidth;
+    setProgress(newWidth / 300); // Atualiza o progresso (0 a 1)
+  }
+};
+
+const progressStyle = useAnimatedStyle(() => {
+  return {
+    width: withSpring(progressWidth.value, { damping: 10, stiffness: 100 }), // Animação suave
+  };
+});
+Adicione a barra de progresso ao layout:
+
+Substitua o conteúdo do View principal pelo seguinte:
+
+tsx
+Copy
+<GestureHandlerRootView style={{ flex: 1 }}>
+  <View style={styles.container}>
+    {/* Capa do Álbum */}
+    <Image source={currentTrack.artwork} style={styles.albumArt} />
+
+    {/* Informações da Música */}
+    <View style={styles.trackInfo}>
+      <Text style={styles.title}>{currentTrack.title}</Text>
+      <Text style={styles.artist}>{currentTrack.artist}</Text>
+    </View>
+
+    {/* Barra de Progresso Interativa */}
+    <View style={styles.progressContainer}>
+      <Text style={styles.timeText}>{formatTime(progress * 180)}</Text> {/* Tempo decorrido */}
+      <View style={styles.progressBar}>
+        <PanGestureHandler onGestureEvent={onGestureEvent}>
+          <Animated.View style={[styles.progress, progressStyle]} />
+        </PanGestureHandler>
+      </View>
+      <Text style={styles.timeText}>{formatTime(180)}</Text> {/* Tempo total */}
+    </View>
+
+    {/* Controles */}
+    <View style={styles.controls}>
+      <TouchableOpacity onPress={handlePrevious}>
+        <Ionicons name="play-skip-back" size={32} color="#fff" />
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.playButton}>
+        <Ionicons name="play" size={48} color="#fff" />
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={handleNext}>
+        <Ionicons name="play-skip-forward" size={32} color="#fff" />
+      </TouchableOpacity>
+    </View>
+
+    {/* Footer */}
+    <Text style={styles.footer}>RM12345 - Seu Nome Completo</Text>
+  </View>
+</GestureHandlerRootView>
+Adicione a função formatTime:
+
+Essa função converte segundos em um formato MM:SS:
+
+tsx
+Copy
+const formatTime = (seconds: number) => {
+  const minutes = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60);
+  return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+};
+Atualize os estilos:
+
+Adicione os estilos para a barra de progresso:
+
+tsx
+Copy
+progressContainer: {
+  flexDirection: 'row',
+  alignItems: 'center',
+  width: '100%',
+  marginBottom: 30,
+},
+progressBar: {
+  flex: 1,
+  height: 3,
+  backgroundColor: '#444',
+  marginHorizontal: 10,
+},
+progress: {
+  height: '100%',
+  backgroundColor: '#1DB954',
+},
+timeText: {
+  color: '#888',
+  fontSize: 14,
+},
+🎯 Passo 2: Explicação das Novas Funcionalidades
+Barra de Progresso Interativa:
+
+O PanGestureHandler detecta gestos de arrastar.
+
+O Animated.View anima a largura da barra de progresso com base no gesto do usuário.
+
+O valor do progresso é atualizado em tempo real.
+
+Tempo Decorrido e Total:
+
+O tempo total da música é fixo em 180 segundos (3 minutos).
+
+O tempo decorrido é calculado com base no progresso.
+
+Formatação do Tempo:
+
+A função formatTime converte segundos em um formato MM:SS.
+
+▶️ Passo 3: Executar o Projeto
+Inicie o servidor de desenvolvimento:
+
+No terminal, execute:
+
+bash
+Copy
+npm start
+Isso abrirá uma interface no navegador com um QR Code.
+
+Execute no seu dispositivo:
+
+Baixe o app Expo Go na Play Store (Android) ou App Store (iOS).
+
+Escaneie o QR Code com o app para ver o projeto rodando no seu celular.
+
+🖼️ Resultado Esperado
+A barra de progresso agora pode ser arrastada para ajustar o tempo da música.
+
+O tempo decorrido e total são exibidos ao lado da barra.
+
+A capa do álbum e as informações da música são atualizadas ao trocar de música.
+
+🚀 Próximos Passos (Opcional)
+Adicionar funcionalidade de play/pause:
+
+Integre o expo-av para reprodução de áudio.
+
+Melhorar as animações:
+
+Use react-native-reanimated para animações mais complexas.
+
+Integrar com um backend:
+
+Carregue as músicas e capas de álbuns dinamicamente.
+
+Precisa de ajuda com algo específico? É só perguntar! 😊
+
+mostre o codigo completo
+Aqui está o código completo com a barra de progresso interativa, a troca de músicas e o layout estilo Spotify:
+
+tsx
+Copy
+import { Ionicons } from '@expo/vector-icons';
+import React, { useState } from 'react';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { GestureHandlerRootView, PanGestureHandler, State } from 'react-native-gesture-handler';
+import Animated, { useSharedValue, useAnimatedStyle, withSpring } from 'react-native-reanimated';
+
+// Lista de músicas
+const tracks = [
+  {
+    id: 1,
+    title: 'QUEM NÃO PODE ERRAR SOU EU',
+    artist: 'Febem, Cersv',
+    artwork: require('./assets/images/capaFebem.jpg'),
+  },
+  {
+    id: 2,
+    title: 'Ai Calica',
+    artist: 'pumapjl, LEALL, Babidi',
+    artwork: require('./assets/images/capaPumapjl.jpg'),
+  },
+  {
+    id: 3,
+    title: 'Fim de Semana no Parque',
+    artist: 'Racionais MCs',
+    artwork: require('./assets/images/capaRacionais.jpg'),
+  },
+  // Adicione mais músicas aqui
+];
+
+const MusicPlayerStatic: React.FC = () => {
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+  const [progress, setProgress] = useState(0); // Progresso atual (0 a 1)
+  const progressWidth = useSharedValue(0); // Largura inicial da barra de progresso
+
+  const currentTrack = tracks[currentTrackIndex];
+
+  const handleNext = () => {
+    setCurrentTrackIndex((prev) => (prev + 1) % tracks.length);
+    setProgress(0); // Reseta o progresso ao trocar de música
+    progressWidth.value = 0; // Reseta a largura da barra de progresso
+  };
+
+  const handlePrevious = () => {
+    setCurrentTrackIndex((prev) => (prev - 1 + tracks.length) % tracks.length);
+    setProgress(0); // Reseta o progresso ao trocar de música
+    progressWidth.value = 0; // Reseta a largura da barra de progresso
+  };
+
+  const onGestureEvent = (event: any) => {
+    if (event.nativeEvent.state === State.ACTIVE) {
+      const newWidth = Math.max(0, Math.min(300, event.nativeEvent.translationX)); // Limita o valor entre 0 e 300
+      progressWidth.value = newWidth;
+      setProgress(newWidth / 300); // Atualiza o progresso (0 a 1)
+    }
+  };
+
+  const progressStyle = useAnimatedStyle(() => {
+    return {
+      width: withSpring(progressWidth.value, { damping: 10, stiffness: 100 }), // Animação suave
+    };
+  });
+
+  const formatTime = (seconds: number) => {
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+  };
+
+  return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <View style={styles.container}>
+        {/* Capa do Álbum */}
+        <Image source={currentTrack.artwork} style={styles.albumArt} />
+
+        {/* Informações da Música */}
+        <View style={styles.trackInfo}>
+          <Text style={styles.title}>{currentTrack.title}</Text>
+          <Text style={styles.artist}>{currentTrack.artist}</Text>
+        </View>
+
+        {/* Barra de Progresso Interativa */}
+        <View style={styles.progressContainer}>
+          <Text style={styles.timeText}>{formatTime(progress * 180)}</Text> {/* Tempo decorrido */}
+          <View style={styles.progressBar}>
+            <PanGestureHandler onGestureEvent={onGestureEvent}>
+              <Animated.View style={[styles.progress, progressStyle]} />
+            </PanGestureHandler>
+          </View>
+          <Text style={styles.timeText}>{formatTime(180)}</Text> {/* Tempo total */}
+        </View>
+
+        {/* Controles */}
+        <View style={styles.controls}>
+          <TouchableOpacity onPress={handlePrevious}>
+            <Ionicons name="play-skip-back" size={32} color="#fff" />
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.playButton}>
+            <Ionicons name="play" size={48} color="#fff" />
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={handleNext}>
+            <Ionicons name="play-skip-forward" size={32} color="#fff" />
+          </TouchableOpacity>
+        </View>
+
+        {/* Footer */}
+        <Text style={styles.footer}>RM12345 - Seu Nome Completo</Text>
+      </View>
+    </GestureHandlerRootView>
+  );
+};
+
+// Estilos
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#1a1a1a',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  albumArt: {
+    width: 300,
+    height: 300,
+    borderRadius: 20,
+    marginBottom: 30,
+  },
+  trackInfo: {
+    alignItems: 'center',
+    marginBottom: 30,
+  },
+  title: {
+    color: '#fff',
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  artist: {
+    color: '#888',
+    fontSize: 18,
+  },
+  progressContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '100%',
+    marginBottom: 30,
+  },
+  progressBar: {
+    flex: 1,
+    height: 3,
+    backgroundColor: '#444',
+    marginHorizontal: 10,
+  },
+  progress: {
+    height: '100%',
+    backgroundColor: '#1DB954',
+  },
+  timeText: {
+    color: '#888',
+    fontSize: 14,
+  },
+  controls: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '80%',
+  },
+  playButton: {
+    backgroundColor: '#1DB954',
+    padding: 20,
+    borderRadius: 50,
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 20,
+    color: '#888',
+    fontSize: 12,
+  },
+});
+
+export default MusicPlayerStatic;
+🎯 O que foi adicionado?
+Barra de Progresso Interativa:
+
+Usamos o PanGestureHandler para detectar gestos de arrastar.
+
+O Animated.View anima a largura da barra de progresso com base no gesto do usuário.
+
+O valor do progresso é atualizado em tempo real.
+
+Tempo Decorrido e Total:
+
+O tempo total da música é fixo em 180 segundos (3 minutos).
+
+O tempo decorrido é calculado com base no progresso.
+
+Formatação do Tempo:
+
+A função formatTime converte segundos em um formato MM:SS.
+
+▶️ Como testar?
+Inicie o servidor de desenvolvimento:
+
+No terminal, execute:
+
+bash
+Copy
+npm start
+Isso abrirá uma interface no navegador com um QR Code.
+
+Execute no seu dispositivo:
+
+Baixe o app Expo Go na Play Store (Android) ou App Store (iOS).
+
+Escaneie o QR Code com o app para ver o projeto rodando no seu celular.
+
+🖼️ Resultado Esperado
+A barra de progresso pode ser arrastada para ajustar o tempo da música.
+
+O tempo decorrido e total são exibidos ao lado da barra.
+
+A capa do álbum e as informações da música são atualizadas ao trocar de música.
+
+🚀 Próximos Passos (Opcional)
+Adicionar funcionalidade de play/pause:
+
+Integre o expo-av para reprodução de áudio.
+
+Melhorar as animações:
+
+Use react-native-reanimated para animações mais complexas.
+
+Integrar com um backend:
+
+Carregue as músicas e capas de álbuns dinamicamente.
+
+Precisa de ajuda com algo específico? É só perguntar! 😊
+
+e o icone de gostei
+Vamos adicionar um ícone de "gostei" (like) ao player de música. Esse ícone permitirá que o usuário marque a música atual como favorita. Vou te mostrar como implementar isso de forma simples e funcional.
+
+🛠️ Passo 1: Adicionar o Ícone de Gostei
+Importe o ícone de coração:
+
+Já estamos usando o Ionicons, que tem um ícone de coração (heart e heart-outline).
+
+Crie um estado para controlar se a música foi curtida:
+
+Use o useState para gerenciar o estado de "gostei".
+
+Adicione o ícone ao layout:
+
+Coloque o ícone de coração ao lado das informações da música.
+
+🎯 Passo 2: Implementar a Funcionalidade de Gostei
+Aqui está o código atualizado:
+
+tsx
+Copy
+import { Ionicons } from '@expo/vector-icons';
+import React, { useState } from 'react';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { GestureHandlerRootView, PanGestureHandler, State } from 'react-native-gesture-handler';
+import Animated, { useSharedValue, useAnimatedStyle, withSpring } from 'react-native-reanimated';
+
+// Lista de músicas
+const tracks = [
+  {
+    id: 1,
+    title: 'QUEM NÃO PODE ERRAR SOU EU',
+    artist: 'Febem, Cersv',
+    artwork: require('./assets/images/capaFebem.jpg'),
+  },
+  {
+    id: 2,
+    title: 'Ai Calica',
+    artist: 'pumapjl, LEALL, Babidi',
+    artwork: require('./assets/images/capaPumapjl.jpg'),
+  },
+  {
+    id: 3,
+    title: 'Fim de Semana no Parque',
+    artist: 'Racionais MCs',
+    artwork: require('./assets/images/capaRacionais.jpg'),
+  },
+  // Adicione mais músicas aqui
+];
+
+const MusicPlayerStatic: React.FC = () => {
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+  const [progress, setProgress] = useState(0); // Progresso atual (0 a 1)
+  const [isLiked, setIsLiked] = useState(false); // Estado de "gostei"
+  const progressWidth = useSharedValue(0); // Largura inicial da barra de progresso
+
+  const currentTrack = tracks[currentTrackIndex];
+
+  const handleNext = () => {
+    setCurrentTrackIndex((prev) => (prev + 1) % tracks.length);
+    setProgress(0); // Reseta o progresso ao trocar de música
+    progressWidth.value = 0; // Reseta a largura da barra de progresso
+    setIsLiked(false); // Reseta o estado de "gostei" ao trocar de música
+  };
+
+  const handlePrevious = () => {
+    setCurrentTrackIndex((prev) => (prev - 1 + tracks.length) % tracks.length);
+    setProgress(0); // Reseta o progresso ao trocar de música
+    progressWidth.value = 0; // Reseta a largura da barra de progresso
+    setIsLiked(false); // Reseta o estado de "gostei" ao trocar de música
+  };
+
+  const onGestureEvent = (event: any) => {
+    if (event.nativeEvent.state === State.ACTIVE) {
+      const newWidth = Math.max(0, Math.min(300, event.nativeEvent.translationX)); // Limita o valor entre 0 e 300
+      progressWidth.value = newWidth;
+      setProgress(newWidth / 300); // Atualiza o progresso (0 a 1)
+    }
+  };
+
+  const progressStyle = useAnimatedStyle(() => {
+    return {
+      width: withSpring(progressWidth.value, { damping: 10, stiffness: 100 }), // Animação suave
+    };
+  });
+
+  const formatTime = (seconds: number) => {
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+  };
+
+  const toggleLike = () => {
+    setIsLiked((prev) => !prev); // Alterna entre "gostei" e "não gostei"
+  };
+
+  return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <View style={styles.container}>
+        {/* Capa do Álbum */}
+        <Image source={currentTrack.artwork} style={styles.albumArt} />
+
+        {/* Informações da Música */}
+        <View style={styles.trackInfo}>
+          <Text style={styles.title}>{currentTrack.title}</Text>
+          <Text style={styles.artist}>{currentTrack.artist}</Text>
+        </View>
+
+        {/* Ícone de Gostei */}
+        <TouchableOpacity onPress={toggleLike} style={styles.likeButton}>
+          <Ionicons
+            name={isLiked ? 'heart' : 'heart-outline'}
+            size={32}
+            color={isLiked ? '#1DB954' : '#fff'}
+          />
+        </TouchableOpacity>
+
+        {/* Barra de Progresso Interativa */}
+        <View style={styles.progressContainer}>
+          <Text style={styles.timeText}>{formatTime(progress * 180)}</Text> {/* Tempo decorrido */}
+          <View style={styles.progressBar}>
+            <PanGestureHandler onGestureEvent={onGestureEvent}>
+              <Animated.View style={[styles.progress, progressStyle]} />
+            </PanGestureHandler>
+          </View>
+          <Text style={styles.timeText}>{formatTime(180)}</Text> {/* Tempo total */}
+        </View>
+
+        {/* Controles */}
+        <View style={styles.controls}>
+          <TouchableOpacity onPress={handlePrevious}>
+            <Ionicons name="play-skip-back" size={32} color="#fff" />
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.playButton}>
+            <Ionicons name="play" size={48} color="#fff" />
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={handleNext}>
+            <Ionicons name="play-skip-forward" size={32} color="#fff" />
+          </TouchableOpacity>
+        </View>
+
+        {/* Footer */}
+        <Text style={styles.footer}>RM12345 - Seu Nome Completo</Text>
+      </View>
+    </GestureHandlerRootView>
+  );
+};
+
+// Estilos
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#1a1a1a',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  albumArt: {
+    width: 300,
+    height: 300,
+    borderRadius: 20,
+    marginBottom: 30,
+  },
+  trackInfo: {
+    alignItems: 'center',
+    marginBottom: 30,
+  },
+  title: {
+    color: '#fff',
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  artist: {
+    color: '#888',
+    fontSize: 18,
+  },
+  likeButton: {
+    position: 'absolute',
+    top: 40,
+    right: 20,
+  },
+  progressContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '100%',
+    marginBottom: 30,
+  },
+  progressBar: {
+    flex: 1,
+    height: 3,
+    backgroundColor: '#444',
+    marginHorizontal: 10,
+  },
+  progress: {
+    height: '100%',
+    backgroundColor: '#1DB954',
+  },
+  timeText: {
+    color: '#888',
+    fontSize: 14,
+  },
+  controls: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '80%',
+  },
+  playButton: {
+    backgroundColor: '#1DB954',
+    padding: 20,
+    borderRadius: 50,
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 20,
+    color: '#888',
+    fontSize: 12,
+  },
+});
+
+export default MusicPlayerStatic;
+🎯 O que foi adicionado?
+Ícone de Gostei:
+
+Um ícone de coração (heart-outline quando não curtido e heart quando curtido).
+
+O ícone muda de cor (branco para verde) quando a música é curtida.
+
+Funcionalidade de Gostei:
+
+Um estado isLiked controla se a música foi curtida.
+
+A função toggleLike alterna entre "gostei" e "não gostei".
+
+Posicionamento do Ícone:
+
+O ícone de gostei foi posicionado no canto superior direito da tela.
+
+▶️ Como testar?
+Inicie o servidor de desenvolvimento:
+
+No terminal, execute:
+
+bash
+Copy
+npm start
+Isso abrirá uma interface no navegador com um QR Code.
+
+Execute no seu dispositivo:
+
+Baixe o app Expo Go na Play Store (Android) ou App Store (iOS).
+
+Escaneie o QR Code com o app para ver o projeto rodando no seu celular.
+
+Teste o ícone de gostei:
+
+Toque no ícone de coração para curtir ou descurtir a música.
+
+🖼️ Resultado Esperado
+O ícone de coração aparece no canto superior direito.
+
+Ao tocar no ícone, ele muda de heart-outline (não curtido) para heart (curtido) e muda de cor.
+
+O estado de "gostei" é resetado ao trocar de música.
+
+🚀 Próximos Passos (Opcional)
+Salvar músicas curtidas:
+
+Use o AsyncStorage para salvar as músicas favoritas do usuário.
+
+Adicionar animação ao ícone de gostei:
+
+Use react-native-reanimated para animar o ícone ao ser clicado.
+
+Integrar com um backend:
+
+Envie as músicas curtidas para um servidor.
+
+Precisa de ajuda com algo específico? É só perguntar! 😊
+
+import { FontAwesome, Ionicons } from '@expo/vector-icons';
+import React, { useEffect, useState } from 'react';
+import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { GestureHandlerRootView, PanGestureHandler } from 'react-native-gesture-handler';
+import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
+
+// Track list
+const tracks = [
+  {
+    id: 1,
+    title: 'QUEM NÃO PODE ERRAR SOU EU',
+    artist: 'Febem, Cersv',
+    duration: 203, // in seconds
+    artwork: require('./assets/images/capaFebem.jpg'),
+  },
+  {
+    id: 2,
+    title: 'Ai Calica',
+    artist: 'pumapjl, LEALL, Babidi',
+    duration: 187,
+    artwork: require('./assets/images/capaPumapjl.jpg'),
+  },
+  {
+    id: 3,
+    title: 'Fim de Semana no Parque',
+    artist: 'Racionais MCs',
+    duration: 271,
+    artwork: require('./assets/images/capaRacionais.jpg'),
+  },
+];
+
+const { width } = Dimensions.get('window');
+const PROGRESS_BAR_WIDTH = width * 0.85;
+
+const ModernMusicPlayer: React.FC = () => {
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+
+  const progressAnim = useSharedValue(0);
+  const currentTrack = tracks[currentTrackIndex];
+
+  // Simulate track playing when isPlaying is true
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+
+    if (isPlaying) {
+      interval = setInterval(() => {
+        setCurrentTime(prev => {
+          if (prev >= currentTrack.duration) {
+            handleNext();
+            return 0;
+          }
+          return prev + 1;
+        });
+      }, 1000);
+    }
+
+    return () => clearInterval(interval);
+  }, [isPlaying, currentTrackIndex]);
+
+  // Update progress animation based on current time
+  useEffect(() => {
+    const progress = currentTime / currentTrack.duration;
+    progressAnim.value = withTiming(progress * PROGRESS_BAR_WIDTH, { duration: 500 });
+  }, [currentTime]);
+
+  const handlePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  const handleNext = () => {
+    setCurrentTrackIndex((prev) => (prev + 1) % tracks.length);
+    setCurrentTime(0);
+  };
+
+  const handlePrevious = () => {
+    setCurrentTrackIndex((prev) => (prev - 1 + tracks.length) % tracks.length);
+    setCurrentTime(0);
+  };
+
+  const formatTime = (seconds: number) => {
+    const min = Math.floor(seconds / 60);
+    const sec = Math.floor(seconds % 60);
+    return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+  };
+
+  const progressStyle = useAnimatedStyle(() => {
+    return {
+      width: progressAnim.value,
+    };
+  });
+
+  const handleProgressGesture = (event: any) => {
+    const { x } = event.nativeEvent;
+    const progress = Math.max(0, Math.min(x, PROGRESS_BAR_WIDTH));
+    progressAnim.value = progress;
+
+    const newTime = (progress / PROGRESS_BAR_WIDTH) * currentTrack.duration;
+    setCurrentTime(newTime);
+  };
+
+  return (
+    <GestureHandlerRootView style={styles.container}>
+      <View style={styles.playerContainer}>
+        {/* Blurred Album Art Background */}
+        <View style={styles.backgroundImageContainer}>
+          <Image
+            source={currentTrack.artwork}
+            style={styles.backgroundImage}
+            blurRadius={80}
+          />
+          <View style={styles.overlay} />
+        </View>
+
+        {/* Album Art */}
+        <Image source={currentTrack.artwork} style={styles.albumArt} />
+
+        {/* Track Info */}
+        <View style={styles.infoContainer}>
+          <Text style={styles.trackTitle} numberOfLines={1}>{currentTrack.title}</Text>
+          <Text style={styles.artistName} numberOfLines={1}>{currentTrack.artist}</Text>
+        </View>
+
+        {/* Progress Bar */}
+        <View style={styles.progressContainer}>
+          <Text style={styles.timeText}>{formatTime(currentTime)}</Text>
+          <View style={styles.progressBarContainer}>
+            <PanGestureHandler onGestureEvent={handleProgressGesture}>
+              <Animated.View style={styles.progressInteraction}>
+                <Animated.View style={[styles.progressBar, progressStyle]} />
+              </Animated.View>
+            </PanGestureHandler>
+          </View>
+          <Text style={styles.timeText}>{formatTime(currentTrack.duration)}</Text>
+        </View>
+
+        {/* Control Buttons */}
+        <View style={styles.controlsContainer}>
+          <TouchableOpacity onPress={handlePrevious} style={styles.sideButton}>
+            <Ionicons name="play-skip-back-sharp" size={24} color="#fff" />
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={handlePlayPause} style={styles.playButton}>
+            <FontAwesome
+              name={isPlaying ? "pause" : "play"}
+              size={28}
+              color="#000"
+              style={isPlaying ? styles.pauseIcon : styles.playIcon}
+            />
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={handleNext} style={styles.sideButton}>
+            <Ionicons name="play-skip-forward-sharp" size={24} color="#fff" />
+          </TouchableOpacity>
+        </View>
+      </View>
+    </GestureHandlerRootView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#000',
+  },
+  playerContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  backgroundImageContainer: {
+    ...StyleSheet.absoluteFillObject,
+    opacity: 0.7,
+  },
+  backgroundImage: {
+    width: '100%',
+    height: '100%',
+  },
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(0,0,0,0.7)',
+  },
+  albumArt: {
+    width: width * 0.7,
+    height: width * 0.7,
+    borderRadius: 10,
+    marginBottom: 40,
+  },
+  infoContainer: {
+    width: width * 0.85,
+    alignItems: 'center',
+    marginBottom: 30,
+  },
+  trackTitle: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 5,
+  },
+  artistName: {
+    color: '#aaa',
+    fontSize: 16,
+    textAlign: 'center',
+  },
+  progressContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: width * 0.9,
+    marginBottom: 40,
+  },
+  timeText: {
+    color: '#aaa',
+    fontSize: 12,
+    width: 35,
+    textAlign: 'center',
+  },
+  progressBarContainer: {
+    flex: 1,
+    height: 6,
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    borderRadius: 3,
+    marginHorizontal: 8,
+    overflow: 'hidden',
+  },
+  progressInteraction: {
+    width: '100%',
+    height: '100%',
+  },
+  progressBar: {
+    height: '100%',
+    backgroundColor: '#1ad1c3',
+    borderRadius: 3,
+  },
+  controlsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: width * 0.7,
+  },
+  sideButton: {
+    padding: 15,
+  },
+  playButton: {
+    backgroundColor: '#1ad1c3',
+    width: 70,
+    height: 70,
+    borderRadius: 35,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: 40,
+  },
+  playIcon: {
+    marginLeft: 4,
+  },
+  pauseIcon: {
+    marginLeft: 0,
+  },
+});
+
+export default ModernMusicPlayer; inclua as alterações nesse codigo
+Vou incluir as alterações que você pediu no código fornecido. Vamos adicionar o ícone de "gostei" e garantir que ele funcione corretamente. Também vou manter todas as funcionalidades existentes, como a barra de progresso interativa e a troca de músicas.
+
+🛠️ Alterações Realizadas
+Adicionar o ícone de "gostei":
+
+Um ícone de coração (heart e heart-outline) será exibido no canto superior direito.
+
+O ícone muda de cor (branco para verde) quando a música é curtida.
+
+Funcionalidade de "gostei":
+
+Um estado isLiked controla se a música foi curtida.
+
+A função toggleLike alterna entre "gostei" e "não gostei".
+
+Resetar o estado de "gostei" ao trocar de música:
+
+Quando o usuário troca de música, o estado de "gostei" é resetado.
+
+🎯 Código Atualizado
+tsx
+Copy
+import { FontAwesome, Ionicons } from '@expo/vector-icons';
+import React, { useEffect, useState } from 'react';
+import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { GestureHandlerRootView, PanGestureHandler } from 'react-native-gesture-handler';
+import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
+
+// Track list
+const tracks = [
+  {
+    id: 1,
+    title: 'QUEM NÃO PODE ERRAR SOU EU',
+    artist: 'Febem, Cersv',
+    duration: 203, // in seconds
+    artwork: require('./assets/images/capaFebem.jpg'),
+  },
+  {
+    id: 2,
+    title: 'Ai Calica',
+    artist: 'pumapjl, LEALL, Babidi',
+    duration: 187,
+    artwork: require('./assets/images/capaPumapjl.jpg'),
+  },
+  {
+    id: 3,
+    title: 'Fim de Semana no Parque',
+    artist: 'Racionais MCs',
+    duration: 271,
+    artwork: require('./assets/images/capaRacionais.jpg'),
+  },
+];
+
+const { width } = Dimensions.get('window');
+const PROGRESS_BAR_WIDTH = width * 0.85;
+
+const ModernMusicPlayer: React.FC = () => {
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [isLiked, setIsLiked] = useState(false); // Estado de "gostei"
+
+  const progressAnim = useSharedValue(0);
+  const currentTrack = tracks[currentTrackIndex];
+
+  // Simulate track playing when isPlaying is true
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+
+    if (isPlaying) {
+      interval = setInterval(() => {
+        setCurrentTime(prev => {
+          if (prev >= currentTrack.duration) {
+            handleNext();
+            return 0;
+          }
+          return prev + 1;
+        });
+      }, 1000);
+    }
+
+    return () => clearInterval(interval);
+  }, [isPlaying, currentTrackIndex]);
+
+  // Update progress animation based on current time
+  useEffect(() => {
+    const progress = currentTime / currentTrack.duration;
+    progressAnim.value = withTiming(progress * PROGRESS_BAR_WIDTH, { duration: 500 });
+  }, [currentTime]);
+
+  const handlePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  const handleNext = () => {
+    setCurrentTrackIndex((prev) => (prev + 1) % tracks.length);
+    setCurrentTime(0);
+    setIsLiked(false); // Reseta o estado de "gostei" ao trocar de música
+  };
+
+  const handlePrevious = () => {
+    setCurrentTrackIndex((prev) => (prev - 1 + tracks.length) % tracks.length);
+    setCurrentTime(0);
+    setIsLiked(false); // Reseta o estado de "gostei" ao trocar de música
+  };
+
+  const toggleLike = () => {
+    setIsLiked((prev) => !prev); // Alterna entre "gostei" e "não gostei"
+  };
+
+  const formatTime = (seconds: number) => {
+    const min = Math.floor(seconds / 60);
+    const sec = Math.floor(seconds % 60);
+    return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+  };
+
+  const progressStyle = useAnimatedStyle(() => {
+    return {
+      width: progressAnim.value,
+    };
+  });
+
+  const handleProgressGesture = (event: any) => {
+    const { x } = event.nativeEvent;
+    const progress = Math.max(0, Math.min(x, PROGRESS_BAR_WIDTH));
+    progressAnim.value = progress;
+
+    const newTime = (progress / PROGRESS_BAR_WIDTH) * currentTrack.duration;
+    setCurrentTime(newTime);
+  };
+
+  return (
+    <GestureHandlerRootView style={styles.container}>
+      <View style={styles.playerContainer}>
+        {/* Blurred Album Art Background */}
+        <View style={styles.backgroundImageContainer}>
+          <Image
+            source={currentTrack.artwork}
+            style={styles.backgroundImage}
+            blurRadius={80}
+          />
+          <View style={styles.overlay} />
+        </View>
+
+        {/* Album Art */}
+        <Image source={currentTrack.artwork} style={styles.albumArt} />
+
+        {/* Track Info */}
+        <View style={styles.infoContainer}>
+          <Text style={styles.trackTitle} numberOfLines={1}>{currentTrack.title}</Text>
+          <Text style={styles.artistName} numberOfLines={1}>{currentTrack.artist}</Text>
+        </View>
+
+        {/* Progress Bar */}
+        <View style={styles.progressContainer}>
+          <Text style={styles.timeText}>{formatTime(currentTime)}</Text>
+          <View style={styles.progressBarContainer}>
+            <PanGestureHandler onGestureEvent={handleProgressGesture}>
+              <Animated.View style={styles.progressInteraction}>
+                <Animated.View style={[styles.progressBar, progressStyle]} />
+              </Animated.View>
+            </PanGestureHandler>
+          </View>
+          <Text style={styles.timeText}>{formatTime(currentTrack.duration)}</Text>
+        </View>
+
+        {/* Control Buttons */}
+        <View style={styles.controlsContainer}>
+          <TouchableOpacity onPress={handlePrevious} style={styles.sideButton}>
+            <Ionicons name="play-skip-back-sharp" size={24} color="#fff" />
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={handlePlayPause} style={styles.playButton}>
+            <FontAwesome
+              name={isPlaying ? "pause" : "play"}
+              size={28}
+              color="#000"
+              style={isPlaying ? styles.pauseIcon : styles.playIcon}
+            />
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={handleNext} style={styles.sideButton}>
+            <Ionicons name="play-skip-forward-sharp" size={24} color="#fff" />
+          </TouchableOpacity>
+        </View>
+
+        {/* Ícone de Gostei */}
+        <TouchableOpacity onPress={toggleLike} style={styles.likeButton}>
+          <Ionicons
+            name={isLiked ? 'heart' : 'heart-outline'}
+            size={32}
+            color={isLiked ? '#1ad1c3' : '#fff'}
+          />
+        </TouchableOpacity>
+      </View>
+    </GestureHandlerRootView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#000',
+  },
+  playerContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  backgroundImageContainer: {
+    ...StyleSheet.absoluteFillObject,
+    opacity: 0.7,
+  },
+  backgroundImage: {
+    width: '100%',
+    height: '100%',
+  },
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(0,0,0,0.7)',
+  },
+  albumArt: {
+    width: width * 0.7,
+    height: width * 0.7,
+    borderRadius: 10,
+    marginBottom: 40,
+  },
+  infoContainer: {
+    width: width * 0.85,
+    alignItems: 'center',
+    marginBottom: 30,
+  },
+  trackTitle: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 5,
+  },
+  artistName: {
+    color: '#aaa',
+    fontSize: 16,
+    textAlign: 'center',
+  },
+  progressContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: width * 0.9,
+    marginBottom: 40,
+  },
+  timeText: {
+    color: '#aaa',
+    fontSize: 12,
+    width: 35,
+    textAlign: 'center',
+  },
+  progressBarContainer: {
+    flex: 1,
+    height: 6,
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    borderRadius: 3,
+    marginHorizontal: 8,
+    overflow: 'hidden',
+  },
+  progressInteraction: {
+    width: '100%',
+    height: '100%',
+  },
+  progressBar: {
+    height: '100%',
+    backgroundColor: '#1ad1c3',
+    borderRadius: 3,
+  },
+  controlsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: width * 0.7,
+  },
+  sideButton: {
+    padding: 15,
+  },
+  playButton: {
+    backgroundColor: '#1ad1c3',
+    width: 70,
+    height: 70,
+    borderRadius: 35,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: 40,
+  },
+  playIcon: {
+    marginLeft: 4,
+  },
+  pauseIcon: {
+    marginLeft: 0,
+  },
+  likeButton: {
+    position: 'absolute',
+    top: 40,
+    right: 20,
+  },
+});
+
+export default ModernMusicPlayer;
+🖼️ Resultado Esperado
+O ícone de coração aparece no canto superior direito.
+
+Ao tocar no ícone, ele muda de heart-outline (não curtido) para heart (curtido) e muda de cor.
+
+O estado de "gostei" é resetado ao trocar de música.
+
+🚀 Próximos Passos (Opcional)
+Salvar músicas curtidas:
+
+Use o AsyncStorage para salvar as músicas favoritas do usuário.
+
+Adicionar animação ao ícone de gostei:
+
+Use react-native-reanimated para animar o ícone ao ser clicado.
+
+Integrar com um backend:
+
+Envie as músicas curtidas para um servidor.
+
+Precisa de ajuda com algo específico? É só perguntar! 😊
+
+tipo assim import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, TouchableOpacity, View, Dimensions } from 'react-native';
+import { GestureHandlerRootView, PanGestureHandler } from 'react-native-gesture-handler';
+import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
+import { MaterialIcons, Ionicons, MaterialCommunityIcons, FontAwesome } from '@expo/vector-icons';
+
+const { width } = Dimensions.get('window');
+const PROGRESS_BAR_WIDTH = width * 0.9;
+
+const SpotifyPlayer: React.FC = () => {
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [currentTime, setCurrentTime] = useState(142); // 2:22
+  const [duration] = useState(215); // 3:35
+  const [isLiked, setIsLiked] = useState(true);
+  
+  const progressAnim = useSharedValue((currentTime / duration) * PROGRESS_BAR_WIDTH);
+
+  // Update progress bar position
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    
+    if (isPlaying) {
+      interval = setInterval(() => {
+        setCurrentTime(prev => {
+          if (prev >= duration) {
+            setIsPlaying(false);
+            return duration;
+          }
+          return prev + 1;
+        });
+      }, 1000);
+    }
+    
+    return () => clearInterval(interval);
+  }, [isPlaying, duration]);
+  
+  // Update progress animation value when currentTime changes
+  useEffect(() => {
+    const progress = currentTime / duration;
+    progressAnim.value = withTiming(progress * PROGRESS_BAR_WIDTH, { duration: 500 });
+  }, [currentTime, duration]);
+
+  const handlePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  const handleLike = () => {
+    setIsLiked(!isLiked);
+  };
+
+  const formatTime = (seconds: number) => {
+    const min = Math.floor(seconds / 60);
+    const sec = Math.floor(seconds % 60);
+    return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+  };
+  
+  const progressStyle = useAnimatedStyle(() => {
+    return {
+      width: progressAnim.value,
+    };
+  });
+
+  const handleProgressGesture = (event: any) => {
+    const { x } = event.nativeEvent;
+    const progress = Math.max(0, Math.min(x, PROGRESS_BAR_WIDTH));
+    progressAnim.value = progress;
+    
+    const newTime = (progress / PROGRESS_BAR_WIDTH) * duration;
+    setCurrentTime(newTime);
+  };
+
+  return (
+    <GestureHandlerRootView style={styles.container}>
+      <View style={styles.playerContainer}>
+        {/* Heart Icon */}
+        <TouchableOpacity style={styles.heartIcon} onPress={handleLike}>
+          <FontAwesome name="heart" size={24} color={isLiked ? "#1DB954" : "#888"} />
+        </TouchableOpacity>
+        
+        {/* Progress Bar */}
+        <View style={styles.progressContainer}>
+          <Text style={styles.timeText}>{formatTime(currentTime)}</Text>
+          <View style={styles.progressBarContainer}>
+            <PanGestureHandler onGestureEvent={handleProgressGesture}>
+              <Animated.View style={styles.progressInteraction}>
+                <Animated.View style={[styles.progressBar, progressStyle]} />
+                <Animated.View style={[styles.progressThumb, progressStyle]} />
+              </Animated.View>
+            </PanGestureHandler>
+          </View>
+          <Text style={styles.timeText}>{formatTime(duration)}</Text>
+        </View>
+        
+        {/* Control Buttons Row */}
+        <View style={styles.controlsContainer}>
+          {/* Shuffle */}
+          <TouchableOpacity style={styles.controlButton}>
+            <MaterialCommunityIcons name="shuffle-variant" size={24} color="#FFFFFF" />
+          </TouchableOpacity>
+          
+          {/* Previous */}
+          <TouchableOpacity style={styles.controlButton}>
+            <MaterialIcons name="skip-previous" size={36} color="#FFFFFF" />
+          </TouchableOpacity>
+          
+          {/* Play/Pause */}
+          <TouchableOpacity onPress={handlePlayPause} style={styles.playPauseButton}>
+            <MaterialIcons name={isPlaying ? "pause" : "play-arrow"} size={36} color="#000000" />
+          </TouchableOpacity>
+          
+          {/* Next */}
+          <TouchableOpacity style={styles.controlButton}>
+            <MaterialIcons name="skip-next" size={36} color="#FFFFFF" />
+          </TouchableOpacity>
+          
+          {/* Repeat */}
+          <TouchableOpacity style={styles.controlButton}>
+            <Ionicons name="repeat" size={24} color="#FFFFFF" />
+          </TouchableOpacity>
+        </View>
+        
+        {/* Bottom Icons */}
+        <View style={styles.bottomIconsContainer}>
+          <TouchableOpacity style={styles.bottomIcon}>
+            <MaterialCommunityIcons name="devices" size={22} color="#888" />
+          </TouchableOpacity>
+          
+          <TouchableOpacity style={styles.bottomIcon}>
+            <MaterialIcons name="queue-music" size={22} color="#888" />
+          </TouchableOpacity>
+        </View>
+      </View>
+    </GestureHandlerRootView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#121212',
+  },
+  playerContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 16,
+  },
+  heartIcon: {
+    position: 'absolute',
+    top: 20,
+    right: 20,
+  },
+  progressContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: width * 0.95,
+    marginBottom: 30,
+  },
+  timeText: {
+    color: '#888',
+    fontSize: 12,
+    width: 35,
+    textAlign: 'center',
+  },
+  progressBarContainer: {
+    flex: 1,
+    height: 4,
+    backgroundColor: 'rgba(255,255,255,0.3)',
+    marginHorizontal: 8,
+    borderRadius: 2,
+    overflow: 'visible',
+  },
+  progressInteraction: {
+    width: '100%',
+    height: '100%',
+    position: 'relative',
+  },
+  progressBar: {
+    height: '100%',
+    backgroundColor: '#FFFFFF',
+    borderRadius: 2,
+  },
+  progressThumb: {
+    position: 'absolute',
+    right: 0,
+    top: -6,
+    width: 12,
+    height: 12,
+    borderRadius: 6,
+    backgroundColor: '#FFFFFF',
+    transform: [{ translateX: 6 }],
+  },
+  controlsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: width * 0.8,
+    marginBottom: 40,
+  },
+  controlButton: {
+    padding: 10,
+  },
+  playPauseButton: {
+    backgroundColor: '#FFFFFF',
+    width: 64,
+    height: 64,
+    borderRadius: 32,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  bottomIconsContainer: {
+    position: 'absolute',
+    bottom: 20,
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+  },
+  bottomIcon: {
+    padding: 10,
+  },
+});
+
+export default SpotifyPlayer;
+Vamos integrar as funcionalidades do seu código anterior (como o ícone de "gostei", a barra de progresso interativa e os controles de música) com o layout e estilo que você forneceu. O objetivo é manter a estrutura do Spotify Player, mas com as funcionalidades que você já implementou.
+
+🛠️ Alterações Realizadas
+Ícone de "gostei":
+
+Adicionado no canto superior direito.
+
+Muda de cor (cinza para verde) quando a música é curtida.
+
+Barra de Progresso Interativa:
+
+Permite arrastar para ajustar o tempo da música.
+
+Exibe o tempo decorrido e o tempo total.
+
+Controles de Música:
+
+Botões de play/pause, próximo, anterior, shuffle e repeat.
+
+Ícones Inferiores:
+
+Ícones para "dispositivos" e "fila de músicas".
+
+🎯 Código Atualizado
+tsx
+Copy
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, TouchableOpacity, View, Dimensions } from 'react-native';
+import { GestureHandlerRootView, PanGestureHandler } from 'react-native-gesture-handler';
+import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
+import { MaterialIcons, Ionicons, MaterialCommunityIcons, FontAwesome } from '@expo/vector-icons';
+
+const { width } = Dimensions.get('window');
+const PROGRESS_BAR_WIDTH = width * 0.9;
+
+const SpotifyPlayer: React.FC = () => {
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [currentTime, setCurrentTime] = useState(142); // 2:22
+  const [duration] = useState(215); // 3:35
+  const [isLiked, setIsLiked] = useState(true);
+
+  const progressAnim = useSharedValue((currentTime / duration) * PROGRESS_BAR_WIDTH);
+
+  // Simulate track playing when isPlaying is true
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+
+    if (isPlaying) {
+      interval = setInterval(() => {
+        setCurrentTime(prev => {
+          if (prev >= duration) {
+            setIsPlaying(false);
+            return duration;
+          }
+          return prev + 1;
+        });
+      }, 1000);
+    }
+
+    return () => clearInterval(interval);
+  }, [isPlaying, duration]);
+
+  // Update progress animation value when currentTime changes
+  useEffect(() => {
+    const progress = currentTime / duration;
+    progressAnim.value = withTiming(progress * PROGRESS_BAR_WIDTH, { duration: 500 });
+  }, [currentTime, duration]);
+
+  const handlePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  const handleLike = () => {
+    setIsLiked(!isLiked);
+  };
+
+  const formatTime = (seconds: number) => {
+    const min = Math.floor(seconds / 60);
+    const sec = Math.floor(seconds % 60);
+    return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+  };
+
+  const progressStyle = useAnimatedStyle(() => {
+    return {
+      width: progressAnim.value,
+    };
+  });
+
+  const handleProgressGesture = (event: any) => {
+    const { x } = event.nativeEvent;
+    const progress = Math.max(0, Math.min(x, PROGRESS_BAR_WIDTH));
+    progressAnim.value = progress;
+
+    const newTime = (progress / PROGRESS_BAR_WIDTH) * duration;
+    setCurrentTime(newTime);
+  };
+
+  return (
+    <GestureHandlerRootView style={styles.container}>
+      <View style={styles.playerContainer}>
+        {/* Heart Icon */}
+        <TouchableOpacity style={styles.heartIcon} onPress={handleLike}>
+          <FontAwesome name="heart" size={24} color={isLiked ? "#1DB954" : "#888"} />
+        </TouchableOpacity>
+
+        {/* Progress Bar */}
+        <View style={styles.progressContainer}>
+          <Text style={styles.timeText}>{formatTime(currentTime)}</Text>
+          <View style={styles.progressBarContainer}>
+            <PanGestureHandler onGestureEvent={handleProgressGesture}>
+              <Animated.View style={styles.progressInteraction}>
+                <Animated.View style={[styles.progressBar, progressStyle]} />
+                <Animated.View style={[styles.progressThumb, progressStyle]} />
+              </Animated.View>
+            </PanGestureHandler>
+          </View>
+          <Text style={styles.timeText}>{formatTime(duration)}</Text>
+        </View>
+
+        {/* Control Buttons Row */}
+        <View style={styles.controlsContainer}>
+          {/* Shuffle */}
+          <TouchableOpacity style={styles.controlButton}>
+            <MaterialCommunityIcons name="shuffle-variant" size={24} color="#FFFFFF" />
+          </TouchableOpacity>
+
+          {/* Previous */}
+          <TouchableOpacity style={styles.controlButton}>
+            <MaterialIcons name="skip-previous" size={36} color="#FFFFFF" />
+          </TouchableOpacity>
+
+          {/* Play/Pause */}
+          <TouchableOpacity onPress={handlePlayPause} style={styles.playPauseButton}>
+            <MaterialIcons name={isPlaying ? "pause" : "play-arrow"} size={36} color="#000000" />
+          </TouchableOpacity>
+
+          {/* Next */}
+          <TouchableOpacity style={styles.controlButton}>
+            <MaterialIcons name="skip-next" size={36} color="#FFFFFF" />
+          </TouchableOpacity>
+
+          {/* Repeat */}
+          <TouchableOpacity style={styles.controlButton}>
+            <Ionicons name="repeat" size={24} color="#FFFFFF" />
+          </TouchableOpacity>
+        </View>
+
+        {/* Bottom Icons */}
+        <View style={styles.bottomIconsContainer}>
+          <TouchableOpacity style={styles.bottomIcon}>
+            <MaterialCommunityIcons name="devices" size={22} color="#888" />
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.bottomIcon}>
+            <MaterialIcons name="queue-music" size={22} color="#888" />
+          </TouchableOpacity>
+        </View>
+      </View>
+    </GestureHandlerRootView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#121212',
+  },
+  playerContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 16,
+  },
+  heartIcon: {
+    position: 'absolute',
+    top: 20,
+    right: 20,
+  },
+  progressContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: width * 0.95,
+    marginBottom: 30,
+  },
+  timeText: {
+    color: '#888',
+    fontSize: 12,
+    width: 35,
+    textAlign: 'center',
+  },
+  progressBarContainer: {
+    flex: 1,
+    height: 4,
+    backgroundColor: 'rgba(255,255,255,0.3)',
+    marginHorizontal: 8,
+    borderRadius: 2,
+    overflow: 'visible',
+  },
+  progressInteraction: {
+    width: '100%',
+    height: '100%',
+    position: 'relative',
+  },
+  progressBar: {
+    height: '100%',
+    backgroundColor: '#FFFFFF',
+    borderRadius: 2,
+  },
+  progressThumb: {
+    position: 'absolute',
+    right: 0,
+    top: -6,
+    width: 12,
+    height: 12,
+    borderRadius: 6,
+    backgroundColor: '#FFFFFF',
+    transform: [{ translateX: 6 }],
+  },
+  controlsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: width * 0.8,
+    marginBottom: 40,
+  },
+  controlButton: {
+    padding: 10,
+  },
+  playPauseButton: {
+    backgroundColor: '#FFFFFF',
+    width: 64,
+    height: 64,
+    borderRadius: 32,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  bottomIconsContainer: {
+    position: 'absolute',
+    bottom: 20,
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+  },
+  bottomIcon: {
+    padding: 10,
+  },
+});
+
+export default SpotifyPlayer;
+🖼️ Resultado Esperado
+Ícone de "gostei" no canto superior direito.
+
+Barra de progresso interativa que pode ser arrastada.
+
+Controles de música (play/pause, próximo, anterior, shuffle e repeat).
+
+Ícones inferiores para "dispositivos" e "fila de músicas".
+
+🚀 Próximos Passos (Opcional)
+Adicionar animações:
+
+Use react-native-reanimated para animar o ícone de "gostei" e a barra de progresso.
+
+Integrar com um backend:
+
+Carregue as músicas e capas de álbuns dinamicamente.
+
+Adicionar funcionalidade de shuffle e repeat:
+
+Implemente a lógica para shuffle e repeat.
+
+Precisa de ajuda com algo específico? É só perguntar! 😊
+
+era pra incluir naquele codigo kkkkkk e mantenha aquele  outro estilo
+Ah, entendi! Você quer que eu inclua as funcionalidades do código anterior (como o ícone de "gostei", a barra de progresso interativa e os controles de música) no estilo do primeiro código que você forneceu (com a capa do álbum, fundo desfocado, etc.). Vou fazer isso mantendo o layout e o estilo do primeiro código, mas adicionando as funcionalidades do segundo.
+
+🛠️ Alterações Realizadas
+Ícone de "gostei":
+
+Adicionado no canto superior direito.
+
+Muda de cor (cinza para verde) quando a música é curtida.
+
+Barra de Progresso Interativa:
+
+Permite arrastar para ajustar o tempo da música.
+
+Exibe o tempo decorrido e o tempo total.
+
+Controles de Música:
+
+Botões de play/pause, próximo, anterior, shuffle e repeat.
+
+Ícones Inferiores:
+
+Ícones para "dispositivos" e "fila de músicas".
+
+🎯 Código Atualizado
+tsx
+Copy
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, TouchableOpacity, View, Dimensions, Image } from 'react-native';
+import { GestureHandlerRootView, PanGestureHandler } from 'react-native-gesture-handler';
+import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
+import { MaterialIcons, Ionicons, MaterialCommunityIcons, FontAwesome } from '@expo/vector-icons';
+
+const { width } = Dimensions.get('window');
+const PROGRESS_BAR_WIDTH = width * 0.85;
+
+// Track list
+const tracks = [
+  {
+    id: 1,
+    title: 'QUEM NÃO PODE ERRAR SOU EU',
+    artist: 'Febem, Cersv',
+    duration: 203, // in seconds
+    artwork: require('./assets/images/capaFebem.jpg'),
+  },
+  {
+    id: 2,
+    title: 'Ai Calica',
+    artist: 'pumapjl, LEALL, Babidi',
+    duration: 187,
+    artwork: require('./assets/images/capaPumapjl.jpg'),
+  },
+  {
+    id: 3,
+    title: 'Fim de Semana no Parque',
+    artist: 'Racionais MCs',
+    duration: 271,
+    artwork: require('./assets/images/capaRacionais.jpg'),
+  },
+];
+
+const ModernMusicPlayer: React.FC = () => {
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [isLiked, setIsLiked] = useState(false);
+
+  const progressAnim = useSharedValue(0);
+  const currentTrack = tracks[currentTrackIndex];
+
+  // Simulate track playing when isPlaying is true
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+
+    if (isPlaying) {
+      interval = setInterval(() => {
+        setCurrentTime(prev => {
+          if (prev >= currentTrack.duration) {
+            handleNext();
+            return 0;
+          }
+          return prev + 1;
+        });
+      }, 1000);
+    }
+
+    return () => clearInterval(interval);
+  }, [isPlaying, currentTrackIndex]);
+
+  // Update progress animation based on current time
+  useEffect(() => {
+    const progress = currentTime / currentTrack.duration;
+    progressAnim.value = withTiming(progress * PROGRESS_BAR_WIDTH, { duration: 500 });
+  }, [currentTime]);
+
+  const handlePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  const handleNext = () => {
+    setCurrentTrackIndex((prev) => (prev + 1) % tracks.length);
+    setCurrentTime(0);
+    setIsLiked(false); // Reseta o estado de "gostei" ao trocar de música
+  };
+
+  const handlePrevious = () => {
+    setCurrentTrackIndex((prev) => (prev - 1 + tracks.length) % tracks.length);
+    setCurrentTime(0);
+    setIsLiked(false); // Reseta o estado de "gostei" ao trocar de música
+  };
+
+  const toggleLike = () => {
+    setIsLiked((prev) => !prev); // Alterna entre "gostei" e "não gostei"
+  };
+
+  const formatTime = (seconds: number) => {
+    const min = Math.floor(seconds / 60);
+    const sec = Math.floor(seconds % 60);
+    return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+  };
+
+  const progressStyle = useAnimatedStyle(() => {
+    return {
+      width: progressAnim.value,
+    };
+  });
+
+  const handleProgressGesture = (event: any) => {
+    const { x } = event.nativeEvent;
+    const progress = Math.max(0, Math.min(x, PROGRESS_BAR_WIDTH));
+    progressAnim.value = progress;
+
+    const newTime = (progress / PROGRESS_BAR_WIDTH) * currentTrack.duration;
+    setCurrentTime(newTime);
+  };
+
+  return (
+    <GestureHandlerRootView style={styles.container}>
+      <View style={styles.playerContainer}>
+        {/* Blurred Album Art Background */}
+        <View style={styles.backgroundImageContainer}>
+          <Image
+            source={currentTrack.artwork}
+            style={styles.backgroundImage}
+            blurRadius={80}
+          />
+          <View style={styles.overlay} />
+        </View>
+
+        {/* Album Art */}
+        <Image source={currentTrack.artwork} style={styles.albumArt} />
+
+        {/* Track Info */}
+        <View style={styles.infoContainer}>
+          <Text style={styles.trackTitle} numberOfLines={1}>{currentTrack.title}</Text>
+          <Text style={styles.artistName} numberOfLines={1}>{currentTrack.artist}</Text>
+        </View>
+
+        {/* Heart Icon */}
+        <TouchableOpacity style={styles.heartIcon} onPress={toggleLike}>
+          <FontAwesome name={isLiked ? 'heart' : 'heart-outline'} size={24} color={isLiked ? '#1ad1c3' : '#fff'} />
+        </TouchableOpacity>
+
+        {/* Progress Bar */}
+        <View style={styles.progressContainer}>
+          <Text style={styles.timeText}>{formatTime(currentTime)}</Text>
+          <View style={styles.progressBarContainer}>
+            <PanGestureHandler onGestureEvent={handleProgressGesture}>
+              <Animated.View style={styles.progressInteraction}>
+                <Animated.View style={[styles.progressBar, progressStyle]} />
+              </Animated.View>
+            </PanGestureHandler>
+          </View>
+          <Text style={styles.timeText}>{formatTime(currentTrack.duration)}</Text>
+        </View>
+
+        {/* Control Buttons */}
+        <View style={styles.controlsContainer}>
+          {/* Shuffle */}
+          <TouchableOpacity style={styles.controlButton}>
+            <MaterialCommunityIcons name="shuffle-variant" size={24} color="#FFFFFF" />
+          </TouchableOpacity>
+
+          {/* Previous */}
+          <TouchableOpacity onPress={handlePrevious} style={styles.controlButton}>
+            <MaterialIcons name="skip-previous" size={36} color="#FFFFFF" />
+          </TouchableOpacity>
+
+          {/* Play/Pause */}
+          <TouchableOpacity onPress={handlePlayPause} style={styles.playPauseButton}>
+            <MaterialIcons name={isPlaying ? "pause" : "play-arrow"} size={36} color="#000000" />
+          </TouchableOpacity>
+
+          {/* Next */}
+          <TouchableOpacity onPress={handleNext} style={styles.controlButton}>
+            <MaterialIcons name="skip-next" size={36} color="#FFFFFF" />
+          </TouchableOpacity>
+
+          {/* Repeat */}
+          <TouchableOpacity style={styles.controlButton}>
+            <Ionicons name="repeat" size={24} color="#FFFFFF" />
+          </TouchableOpacity>
+        </View>
+
+        {/* Bottom Icons */}
+        <View style={styles.bottomIconsContainer}>
+          <TouchableOpacity style={styles.bottomIcon}>
+            <MaterialCommunityIcons name="devices" size={22} color="#888" />
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.bottomIcon}>
+            <MaterialIcons name="queue-music" size={22} color="#888" />
+          </TouchableOpacity>
+        </View>
+      </View>
+    </GestureHandlerRootView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#000',
+  },
+  playerContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  backgroundImageContainer: {
+    ...StyleSheet.absoluteFillObject,
+    opacity: 0.7,
+  },
+  backgroundImage: {
+    width: '100%',
+    height: '100%',
+  },
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(0,0,0,0.7)',
+  },
+  albumArt: {
+    width: width * 0.7,
+    height: width * 0.7,
+    borderRadius: 10,
+    marginBottom: 40,
+  },
+  infoContainer: {
+    width: width * 0.85,
+    alignItems: 'center',
+    marginBottom: 30,
+  },
+  trackTitle: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 5,
+  },
+  artistName: {
+    color: '#aaa',
+    fontSize: 16,
+    textAlign: 'center',
+  },
+  heartIcon: {
+    position: 'absolute',
+    top: 40,
+    right: 20,
+  },
+  progressContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: width * 0.9,
+    marginBottom: 40,
+  },
+  timeText: {
+    color: '#aaa',
+    fontSize: 12,
+    width: 35,
+    textAlign: 'center',
+  },
+  progressBarContainer: {
+    flex: 1,
+    height: 6,
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    borderRadius: 3,
+    marginHorizontal: 8,
+    overflow: 'hidden',
+  },
+  progressInteraction: {
+    width: '100%',
+    height: '100%',
+  },
+  progressBar: {
+    height: '100%',
+    backgroundColor: '#1ad1c3',
+    borderRadius: 3,
+  },
+  controlsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: width * 0.7,
+  },
+  controlButton: {
+    padding: 15,
+  },
+  playPauseButton: {
+    backgroundColor: '#1ad1c3',
+    width: 70,
+    height: 70,
+    borderRadius: 35,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: 40,
+  },
+  bottomIconsContainer: {
+    position: 'absolute',
+    bottom: 20,
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+  },
+  bottomIcon: {
+    padding: 10,
+  },
+});
+
+export default ModernMusicPlayer;
+🖼️ Resultado Esperado
+Ícone de "gostei" no canto superior direito.
+
+Barra de progresso interativa que pode ser arrastada.
+
+Controles de música (play/pause, próximo, anterior, shuffle e repeat).
+
+Ícones inferiores para "dispositivos" e "fila de músicas".
+
+Layout com fundo desfocado e capa do álbum centralizada.
+
+🚀 Próximos Passos (Opcional)
+Adicionar animações:
+
+Use react-native-reanimated para animar o ícone de "gostei" e a barra de progresso.
+
+Integrar com um backend:
+
+Carregue as músicas e capas de álbuns dinamicamente.
+
+Adicionar funcionalidade de shuffle e repeat:
+
+Implemente a lógica para shuffle e repeat.
+
+Precisa de ajuda com algo específico? É só perguntar! 😊
+
+joga o nome da musica pro lado esquerdo e artista sabe
+Claro! Vou ajustar o layout para que o nome da música fique à esquerda e o nome do artista à direita, alinhados horizontalmente. Isso dará um visual mais moderno e organizado, semelhante ao que você mencionou.
+
+🛠️ Alterações Realizadas
+Ajuste no layout das informações da música:
+
+O nome da música ficará à esquerda.
+
+O nome do artista ficará à direita.
+
+Ambos estarão na mesma linha, com espaço entre eles.
+
+Manutenção do estilo atual:
+
+O fundo desfocado, a capa do álbum e os controles permanecem inalterados.
+
+🎯 Código Atualizado
+tsx
+Copy
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, TouchableOpacity, View, Dimensions, Image } from 'react-native';
+import { GestureHandlerRootView, PanGestureHandler } from 'react-native-gesture-handler';
+import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
+import { MaterialIcons, Ionicons, MaterialCommunityIcons, FontAwesome } from '@expo/vector-icons';
+
+const { width } = Dimensions.get('window');
+const PROGRESS_BAR_WIDTH = width * 0.85;
+
+// Track list
+const tracks = [
+  {
+    id: 1,
+    title: 'QUEM NÃO PODE ERRAR SOU EU',
+    artist: 'Febem, Cersv',
+    duration: 203, // in seconds
+    artwork: require('./assets/images/capaFebem.jpg'),
+  },
+  {
+    id: 2,
+    title: 'Ai Calica',
+    artist: 'pumapjl, LEALL, Babidi',
+    duration: 187,
+    artwork: require('./assets/images/capaPumapjl.jpg'),
+  },
+  {
+    id: 3,
+    title: 'Fim de Semana no Parque',
+    artist: 'Racionais MCs',
+    duration: 271,
+    artwork: require('./assets/images/capaRacionais.jpg'),
+  },
+];
+
+const ModernMusicPlayer: React.FC = () => {
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [isLiked, setIsLiked] = useState(false);
+
+  const progressAnim = useSharedValue(0);
+  const currentTrack = tracks[currentTrackIndex];
+
+  // Simulate track playing when isPlaying is true
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+
+    if (isPlaying) {
+      interval = setInterval(() => {
+        setCurrentTime(prev => {
+          if (prev >= currentTrack.duration) {
+            handleNext();
+            return 0;
+          }
+          return prev + 1;
+        });
+      }, 1000);
+    }
+
+    return () => clearInterval(interval);
+  }, [isPlaying, currentTrackIndex]);
+
+  // Update progress animation based on current time
+  useEffect(() => {
+    const progress = currentTime / currentTrack.duration;
+    progressAnim.value = withTiming(progress * PROGRESS_BAR_WIDTH, { duration: 500 });
+  }, [currentTime]);
+
+  const handlePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  const handleNext = () => {
+    setCurrentTrackIndex((prev) => (prev + 1) % tracks.length);
+    setCurrentTime(0);
+    setIsLiked(false); // Reseta o estado de "gostei" ao trocar de música
+  };
+
+  const handlePrevious = () => {
+    setCurrentTrackIndex((prev) => (prev - 1 + tracks.length) % tracks.length);
+    setCurrentTime(0);
+    setIsLiked(false); // Reseta o estado de "gostei" ao trocar de música
+  };
+
+  const toggleLike = () => {
+    setIsLiked((prev) => !prev); // Alterna entre "gostei" e "não gostei"
+  };
+
+  const formatTime = (seconds: number) => {
+    const min = Math.floor(seconds / 60);
+    const sec = Math.floor(seconds % 60);
+    return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+  };
+
+  const progressStyle = useAnimatedStyle(() => {
+    return {
+      width: progressAnim.value,
+    };
+  });
+
+  const handleProgressGesture = (event: any) => {
+    const { x } = event.nativeEvent;
+    const progress = Math.max(0, Math.min(x, PROGRESS_BAR_WIDTH));
+    progressAnim.value = progress;
+
+    const newTime = (progress / PROGRESS_BAR_WIDTH) * currentTrack.duration;
+    setCurrentTime(newTime);
+  };
+
+  return (
+    <GestureHandlerRootView style={styles.container}>
+      <View style={styles.playerContainer}>
+        {/* Blurred Album Art Background */}
+        <View style={styles.backgroundImageContainer}>
+          <Image
+            source={currentTrack.artwork}
+            style={styles.backgroundImage}
+            blurRadius={80}
+          />
+          <View style={styles.overlay} />
+        </View>
+
+        {/* Album Art */}
+        <Image source={currentTrack.artwork} style={styles.albumArt} />
+
+        {/* Track Info */}
+        <View style={styles.infoContainer}>
+          <Text style={styles.trackTitle} numberOfLines={1}>
+            {currentTrack.title}
+          </Text>
+          <Text style={styles.artistName} numberOfLines={1}>
+            {currentTrack.artist}
+          </Text>
+        </View>
+
+        {/* Heart Icon */}
+        <TouchableOpacity style={styles.heartIcon} onPress={toggleLike}>
+          <FontAwesome name={isLiked ? 'heart' : 'heart-outline'} size={24} color={isLiked ? '#1ad1c3' : '#fff'} />
+        </TouchableOpacity>
+
+        {/* Progress Bar */}
+        <View style={styles.progressContainer}>
+          <Text style={styles.timeText}>{formatTime(currentTime)}</Text>
+          <View style={styles.progressBarContainer}>
+            <PanGestureHandler onGestureEvent={handleProgressGesture}>
+              <Animated.View style={styles.progressInteraction}>
+                <Animated.View style={[styles.progressBar, progressStyle]} />
+              </Animated.View>
+            </PanGestureHandler>
+          </View>
+          <Text style={styles.timeText}>{formatTime(currentTrack.duration)}</Text>
+        </View>
+
+        {/* Control Buttons */}
+        <View style={styles.controlsContainer}>
+          {/* Shuffle */}
+          <TouchableOpacity style={styles.controlButton}>
+            <MaterialCommunityIcons name="shuffle-variant" size={24} color="#FFFFFF" />
+          </TouchableOpacity>
+
+          {/* Previous */}
+          <TouchableOpacity onPress={handlePrevious} style={styles.controlButton}>
+            <MaterialIcons name="skip-previous" size={36} color="#FFFFFF" />
+          </TouchableOpacity>
+
+          {/* Play/Pause */}
+          <TouchableOpacity onPress={handlePlayPause} style={styles.playPauseButton}>
+            <MaterialIcons name={isPlaying ? "pause" : "play-arrow"} size={36} color="#000000" />
+          </TouchableOpacity>
+
+          {/* Next */}
+          <TouchableOpacity onPress={handleNext} style={styles.controlButton}>
+            <MaterialIcons name="skip-next" size={36} color="#FFFFFF" />
+          </TouchableOpacity>
+
+          {/* Repeat */}
+          <TouchableOpacity style={styles.controlButton}>
+            <Ionicons name="repeat" size={24} color="#FFFFFF" />
+          </TouchableOpacity>
+        </View>
+
+        {/* Bottom Icons */}
+        <View style={styles.bottomIconsContainer}>
+          <TouchableOpacity style={styles.bottomIcon}>
+            <MaterialCommunityIcons name="devices" size={22} color="#888" />
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.bottomIcon}>
+            <MaterialIcons name="queue-music" size={22} color="#888" />
+          </TouchableOpacity>
+        </View>
+      </View>
+    </GestureHandlerRootView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#000',
+  },
+  playerContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  backgroundImageContainer: {
+    ...StyleSheet.absoluteFillObject,
+    opacity: 0.7,
+  },
+  backgroundImage: {
+    width: '100%',
+    height: '100%',
+  },
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(0,0,0,0.7)',
+  },
+  albumArt: {
+    width: width * 0.7,
+    height: width * 0.7,
+    borderRadius: 10,
+    marginBottom: 40,
+  },
+  infoContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: width * 0.85,
+    marginBottom: 30,
+  },
+  trackTitle: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+    flex: 1,
+    marginRight: 10,
+  },
+  artistName: {
+    color: '#aaa',
+    fontSize: 16,
+    flex: 1,
+    textAlign: 'right',
+  },
+  heartIcon: {
+    position: 'absolute',
+    top: 40,
+    right: 20,
+  },
+  progressContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: width * 0.9,
+    marginBottom: 40,
+  },
+  timeText: {
+    color: '#aaa',
+    fontSize: 12,
+    width: 35,
+    textAlign: 'center',
+  },
+  progressBarContainer: {
+    flex: 1,
+    height: 6,
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    borderRadius: 3,
+    marginHorizontal: 8,
+    overflow: 'hidden',
+  },
+  progressInteraction: {
+    width: '100%',
+    height: '100%',
+  },
+  progressBar: {
+    height: '100%',
+    backgroundColor: '#1ad1c3',
+    borderRadius: 3,
+  },
+  controlsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: width * 0.7,
+  },
+  controlButton: {
+    padding: 15,
+  },
+  playPauseButton: {
+    backgroundColor: '#1ad1c3',
+    width: 70,
+    height: 70,
+    borderRadius: 35,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: 40,
+  },
+  bottomIconsContainer: {
+    position: 'absolute',
+    bottom: 20,
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+  },
+  bottomIcon: {
+    padding: 10,
+  },
+});
+
+export default ModernMusicPlayer;
+🖼️ Resultado Esperado
+Nome da música à esquerda.
+
+Nome do artista à direita.
+
+Ambos alinhados horizontalmente, com espaço entre eles.
+
+Layout moderno e organizado, mantendo o estilo do fundo desfocado e a capa do álbum.
+
+🚀 Próximos Passos (Opcional)
+Adicionar animações:
+
+Use react-native-reanimated para animar o ícone de "gostei" e a barra de progresso.
+
+Integrar com um backend:
+
+Carregue as músicas e capas de álbuns dinamicamente.
+
+Adicionar funcionalidade de shuffle e repeat:
+
+Implemente a lógica para shuffle e repeat.
+
+Precisa de ajuda com algo específico? É só perguntar! 😊
+
+eu falei os dois na esquerda
+Ah, entendi agora! Você quer que o nome da música e o nome do artista fiquem ambos à esquerda, um embaixo do outro. Vou ajustar o layout para que o nome da música fique acima e o nome do artista logo abaixo, alinhados à esquerda.
+
+🛠️ Alterações Realizadas
+Ajuste no layout das informações da música:
+
+O nome da música ficará acima.
+
+O nome do artista ficará logo abaixo.
+
+Ambos estarão alinhados à esquerda.
+
+Manutenção do estilo atual:
+
+O fundo desfocado, a capa do álbum e os controles permanecem inalterados.
+
+🎯 Código Atualizado
+tsx
+Copy
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, TouchableOpacity, View, Dimensions, Image } from 'react-native';
+import { GestureHandlerRootView, PanGestureHandler } from 'react-native-gesture-handler';
+import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
+import { MaterialIcons, Ionicons, MaterialCommunityIcons, FontAwesome } from '@expo/vector-icons';
+
+const { width } = Dimensions.get('window');
+const PROGRESS_BAR_WIDTH = width * 0.85;
+
+// Track list
+const tracks = [
+  {
+    id: 1,
+    title: 'QUEM NÃO PODE ERRAR SOU EU',
+    artist: 'Febem, Cersv',
+    duration: 203, // in seconds
+    artwork: require('./assets/images/capaFebem.jpg'),
+  },
+  {
+    id: 2,
+    title: 'Ai Calica',
+    artist: 'pumapjl, LEALL, Babidi',
+    duration: 187,
+    artwork: require('./assets/images/capaPumapjl.jpg'),
+  },
+  {
+    id: 3,
+    title: 'Fim de Semana no Parque',
+    artist: 'Racionais MCs',
+    duration: 271,
+    artwork: require('./assets/images/capaRacionais.jpg'),
+  },
+];
+
+const ModernMusicPlayer: React.FC = () => {
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [isLiked, setIsLiked] = useState(false);
+
+  const progressAnim = useSharedValue(0);
+  const currentTrack = tracks[currentTrackIndex];
+
+  // Simulate track playing when isPlaying is true
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+
+    if (isPlaying) {
+      interval = setInterval(() => {
+        setCurrentTime(prev => {
+          if (prev >= currentTrack.duration) {
+            handleNext();
+            return 0;
+          }
+          return prev + 1;
+        });
+      }, 1000);
+    }
+
+    return () => clearInterval(interval);
+  }, [isPlaying, currentTrackIndex]);
+
+  // Update progress animation based on current time
+  useEffect(() => {
+    const progress = currentTime / currentTrack.duration;
+    progressAnim.value = withTiming(progress * PROGRESS_BAR_WIDTH, { duration: 500 });
+  }, [currentTime]);
+
+  const handlePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  const handleNext = () => {
+    setCurrentTrackIndex((prev) => (prev + 1) % tracks.length);
+    setCurrentTime(0);
+    setIsLiked(false); // Reseta o estado de "gostei" ao trocar de música
+  };
+
+  const handlePrevious = () => {
+    setCurrentTrackIndex((prev) => (prev - 1 + tracks.length) % tracks.length);
+    setCurrentTime(0);
+    setIsLiked(false); // Reseta o estado de "gostei" ao trocar de música
+  };
+
+  const toggleLike = () => {
+    setIsLiked((prev) => !prev); // Alterna entre "gostei" e "não gostei"
+  };
+
+  const formatTime = (seconds: number) => {
+    const min = Math.floor(seconds / 60);
+    const sec = Math.floor(seconds % 60);
+    return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+  };
+
+  const progressStyle = useAnimatedStyle(() => {
+    return {
+      width: progressAnim.value,
+    };
+  });
+
+  const handleProgressGesture = (event: any) => {
+    const { x } = event.nativeEvent;
+    const progress = Math.max(0, Math.min(x, PROGRESS_BAR_WIDTH));
+    progressAnim.value = progress;
+
+    const newTime = (progress / PROGRESS_BAR_WIDTH) * currentTrack.duration;
+    setCurrentTime(newTime);
+  };
+
+  return (
+    <GestureHandlerRootView style={styles.container}>
+      <View style={styles.playerContainer}>
+        {/* Blurred Album Art Background */}
+        <View style={styles.backgroundImageContainer}>
+          <Image
+            source={currentTrack.artwork}
+            style={styles.backgroundImage}
+            blurRadius={80}
+          />
+          <View style={styles.overlay} />
+        </View>
+
+        {/* Album Art */}
+        <Image source={currentTrack.artwork} style={styles.albumArt} />
+
+        {/* Track Info */}
+        <View style={styles.infoContainer}>
+          <Text style={styles.trackTitle} numberOfLines={1}>
+            {currentTrack.title}
+          </Text>
+          <Text style={styles.artistName} numberOfLines={1}>
+            {currentTrack.artist}
+          </Text>
+        </View>
+
+        {/* Heart Icon */}
+        <TouchableOpacity style={styles.heartIcon} onPress={toggleLike}>
+          <FontAwesome name={isLiked ? 'heart' : 'heart-outline'} size={24} color={isLiked ? '#1ad1c3' : '#fff'} />
+        </TouchableOpacity>
+
+        {/* Progress Bar */}
+        <View style={styles.progressContainer}>
+          <Text style={styles.timeText}>{formatTime(currentTime)}</Text>
+          <View style={styles.progressBarContainer}>
+            <PanGestureHandler onGestureEvent={handleProgressGesture}>
+              <Animated.View style={styles.progressInteraction}>
+                <Animated.View style={[styles.progressBar, progressStyle]} />
+              </Animated.View>
+            </PanGestureHandler>
+          </View>
+          <Text style={styles.timeText}>{formatTime(currentTrack.duration)}</Text>
+        </View>
+
+        {/* Control Buttons */}
+        <View style={styles.controlsContainer}>
+          {/* Shuffle */}
+          <TouchableOpacity style={styles.controlButton}>
+            <MaterialCommunityIcons name="shuffle-variant" size={24} color="#FFFFFF" />
+          </TouchableOpacity>
+
+          {/* Previous */}
+          <TouchableOpacity onPress={handlePrevious} style={styles.controlButton}>
+            <MaterialIcons name="skip-previous" size={36} color="#FFFFFF" />
+          </TouchableOpacity>
+
+          {/* Play/Pause */}
+          <TouchableOpacity onPress={handlePlayPause} style={styles.playPauseButton}>
+            <MaterialIcons name={isPlaying ? "pause" : "play-arrow"} size={36} color="#000000" />
+          </TouchableOpacity>
+
+          {/* Next */}
+          <TouchableOpacity onPress={handleNext} style={styles.controlButton}>
+            <MaterialIcons name="skip-next" size={36} color="#FFFFFF" />
+          </TouchableOpacity>
+
+          {/* Repeat */}
+          <TouchableOpacity style={styles.controlButton}>
+            <Ionicons name="repeat" size={24} color="#FFFFFF" />
+          </TouchableOpacity>
+        </View>
+
+        {/* Bottom Icons */}
+        <View style={styles.bottomIconsContainer}>
+          <TouchableOpacity style={styles.bottomIcon}>
+            <MaterialCommunityIcons name="devices" size={22} color="#888" />
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.bottomIcon}>
+            <MaterialIcons name="queue-music" size={22} color="#888" />
+          </TouchableOpacity>
+        </View>
+      </View>
+    </GestureHandlerRootView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#000',
+  },
+  playerContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  backgroundImageContainer: {
+    ...StyleSheet.absoluteFillObject,
+    opacity: 0.7,
+  },
+  backgroundImage: {
+    width: '100%',
+    height: '100%',
+  },
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(0,0,0,0.7)',
+  },
+  albumArt: {
+    width: width * 0.7,
+    height: width * 0.7,
+    borderRadius: 10,
+    marginBottom: 40,
+  },
+  infoContainer: {
+    width: width * 0.85,
+    alignItems: 'flex-start', // Alinha à esquerda
+    marginBottom: 30,
+  },
+  trackTitle: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 5, // Espaço entre o título e o artista
+  },
+  artistName: {
+    color: '#aaa',
+    fontSize: 16,
+  },
+  heartIcon: {
+    position: 'absolute',
+    top: 40,
+    right: 20,
+  },
+  progressContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: width * 0.9,
+    marginBottom: 40,
+  },
+  timeText: {
+    color: '#aaa',
+    fontSize: 12,
+    width: 35,
+    textAlign: 'center',
+  },
+  progressBarContainer: {
+    flex: 1,
+    height: 6,
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    borderRadius: 3,
+    marginHorizontal: 8,
+    overflow: 'hidden',
+  },
+  progressInteraction: {
+    width: '100%',
+    height: '100%',
+  },
+  progressBar: {
+    height: '100%',
+    backgroundColor: '#1ad1c3',
+    borderRadius: 3,
+  },
+  controlsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: width * 0.7,
+  },
+  controlButton: {
+    padding: 15,
+  },
+  playPauseButton: {
+    backgroundColor: '#1ad1c3',
+    width: 70,
+    height: 70,
+    borderRadius: 35,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: 40,
+  },
+  bottomIconsContainer: {
+    position: 'absolute',
+    bottom: 20,
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+  },
+  bottomIcon: {
+    padding: 10,
+  },
+});
+
+export default ModernMusicPlayer;
+🖼️ Resultado Esperado
+Nome da música acima.
+
+Nome do artista logo abaixo.
+
+Ambos alinhados à esquerda.
+
+Layout moderno e organizado, mantendo o estilo do fundo desfocado e a capa do álbum.
+
+🚀 Próximos Passos (Opcional)
+Adicionar animações:
+
+Use react-native-reanimated para animar o ícone de "gostei" e a barra de progresso.
+
+Integrar com um backend:
+
+Carregue as músicas e capas de álbuns dinamicamente.
+
+Adicionar funcionalidade de shuffle e repeat:
+
+Implemente a lógica para shuffle e repeat.
+
+Precisa de ajuda com algo específico? É só perguntar! 😊
+
+<FontAwesome name={isLiked ? 'heart' : 'heart-outline'} size={24} color={isLiked ? '#1ad1c3' : '#fff'} />
+deu erro aqui
+O erro ocorre porque o ícone heart-outline não existe na biblioteca @expo/vector-icons para o FontAwesome. O ícone correto para o coração vazio no FontAwesome é heart-o.
+
+Vou corrigir o código para usar o ícone correto. Aqui está a linha atualizada:
+
+tsx
+Copy
+<FontAwesome name={isLiked ? 'heart' : 'heart-o'} size={24} color={isLiked ? '#1ad1c3' : '#fff'} />
+🛠️ Por que o erro ocorreu?
+O ícone heart-outline é usado em outras bibliotecas de ícones, como o MaterialCommunityIcons.
+
+No FontAwesome, o ícone para o coração vazio é heart-o.
+
+🎯 Código Corrigido
+Aqui está o trecho do código com a correção:
+
+tsx
+Copy
+import { FontAwesome } from '@expo/vector-icons';
+
+// Dentro do componente
+<TouchableOpacity style={styles.heartIcon} onPress={toggleLike}>
+  <FontAwesome name={isLiked ? 'heart' : 'heart-o'} size={24} color={isLiked ? '#1ad1c3' : '#fff'} />
+</TouchableOpacity>
+🖼️ Resultado Esperado
+Quando a música não está curtida (isLiked = false), o ícone será um coração vazio (heart-o).
+
+Quando a música está curtida (isLiked = true), o ícone será um coração preenchido (heart).
+
+A cor do ícone muda de branco (#fff) para verde (#1ad1c3) quando a música é curtida.
+
+🚀 Próximos Passos (Opcional)
+Adicionar animações:
+
+Use react-native-reanimated para animar o ícone de "gostei" ao ser clicado.
+
+Integrar com um backend:
+
+Salve as músicas curtidas no servidor ou no armazenamento local.
+
+Melhorar a experiência do usuário:
+
+Adicione feedback visual ao curtir/descurtir uma música.
+
+Precisa de ajuda com algo específico? É só perguntar! 😊
+
+faça que eles fique assim no inicio do player
+Claro! Vou ajustar o código para que o nome da música e o nome do artista fiquem alinhados à esquerda, um embaixo do outro, no início do player. Além disso, vou garantir que o ícone de "gostei" fique no canto superior direito, como você solicitou.
+
+🛠️ Alterações Realizadas
+Ajuste no layout das informações da música:
+
+O nome da música ficará acima.
+
+O nome do artista ficará logo abaixo.
+
+Ambos estarão alinhados à esquerda, no início do player.
+
+Posicionamento do ícone de "gostei":
+
+O ícone de "gostei" ficará no canto superior direito.
+
+Manutenção do estilo atual:
+
+O fundo desfocado, a capa do álbum e os controles permanecem inalterados.
+
+🎯 Código Atualizado
+Aqui está o código completo com as alterações:
+
+tsx
+Copy
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, TouchableOpacity, View, Dimensions, Image } from 'react-native';
+import { GestureHandlerRootView, PanGestureHandler } from 'react-native-gesture-handler';
+import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
+import { MaterialIcons, Ionicons, MaterialCommunityIcons, FontAwesome } from '@expo/vector-icons';
+
+const { width } = Dimensions.get('window');
+const PROGRESS_BAR_WIDTH = width * 0.85;
+
+// Track list
+const tracks = [
+  {
+    id: 1,
+    title: 'QUEM NÃO PODE ERRAR SOU EU',
+    artist: 'Febem, Cersv',
+    duration: 203, // in seconds
+    artwork: require('./assets/images/capaFebem.jpg'),
+  },
+  {
+    id: 2,
+    title: 'Ai Calica',
+    artist: 'pumapjl, LEALL, Babidi',
+    duration: 187,
+    artwork: require('./assets/images/capaPumapjl.jpg'),
+  },
+  {
+    id: 3,
+    title: 'Fim de Semana no Parque',
+    artist: 'Racionais MCs',
+    duration: 271,
+    artwork: require('./assets/images/capaRacionais.jpg'),
+  },
+];
+
+const ModernMusicPlayer: React.FC = () => {
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [isLiked, setIsLiked] = useState(false);
+
+  const progressAnim = useSharedValue(0);
+  const currentTrack = tracks[currentTrackIndex];
+
+  // Simulate track playing when isPlaying is true
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+
+    if (isPlaying) {
+      interval = setInterval(() => {
+        setCurrentTime(prev => {
+          if (prev >= currentTrack.duration) {
+            handleNext();
+            return 0;
+          }
+          return prev + 1;
+        });
+      }, 1000);
+    }
+
+    return () => clearInterval(interval);
+  }, [isPlaying, currentTrackIndex]);
+
+  // Update progress animation based on current time
+  useEffect(() => {
+    const progress = currentTime / currentTrack.duration;
+    progressAnim.value = withTiming(progress * PROGRESS_BAR_WIDTH, { duration: 500 });
+  }, [currentTime]);
+
+  const handlePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  const handleNext = () => {
+    setCurrentTrackIndex((prev) => (prev + 1) % tracks.length);
+    setCurrentTime(0);
+    setIsLiked(false); // Reseta o estado de "gostei" ao trocar de música
+  };
+
+  const handlePrevious = () => {
+    setCurrentTrackIndex((prev) => (prev - 1 + tracks.length) % tracks.length);
+    setCurrentTime(0);
+    setIsLiked(false); // Reseta o estado de "gostei" ao trocar de música
+  };
+
+  const toggleLike = () => {
+    setIsLiked((prev) => !prev); // Alterna entre "gostei" e "não gostei"
+  };
+
+  const formatTime = (seconds: number) => {
+    const min = Math.floor(seconds / 60);
+    const sec = Math.floor(seconds % 60);
+    return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+  };
+
+  const progressStyle = useAnimatedStyle(() => {
+    return {
+      width: progressAnim.value,
+    };
+  });
+
+  const handleProgressGesture = (event: any) => {
+    const { x } = event.nativeEvent;
+    const progress = Math.max(0, Math.min(x, PROGRESS_BAR_WIDTH));
+    progressAnim.value = progress;
+
+    const newTime = (progress / PROGRESS_BAR_WIDTH) * currentTrack.duration;
+    setCurrentTime(newTime);
+  };
+
+  return (
+    <GestureHandlerRootView style={styles.container}>
+      <View style={styles.playerContainer}>
+        {/* Blurred Album Art Background */}
+        <View style={styles.backgroundImageContainer}>
+          <Image
+            source={currentTrack.artwork}
+            style={styles.backgroundImage}
+            blurRadius={80}
+          />
+          <View style={styles.overlay} />
+        </View>
+
+        {/* Track Info */}
+        <View style={styles.infoContainer}>
+          <Text style={styles.trackTitle} numberOfLines={1}>
+            {currentTrack.title}
+          </Text>
+          <Text style={styles.artistName} numberOfLines={1}>
+            {currentTrack.artist}
+          </Text>
+        </View>
+
+        {/* Heart Icon */}
+        <TouchableOpacity style={styles.heartIcon} onPress={toggleLike}>
+          <FontAwesome name={isLiked ? 'heart' : 'heart-o'} size={24} color={isLiked ? '#1ad1c3' : '#fff'} />
+        </TouchableOpacity>
+
+        {/* Album Art */}
+        <Image source={currentTrack.artwork} style={styles.albumArt} />
+
+        {/* Progress Bar */}
+        <View style={styles.progressContainer}>
+          <Text style={styles.timeText}>{formatTime(currentTime)}</Text>
+          <View style={styles.progressBarContainer}>
+            <PanGestureHandler onGestureEvent={handleProgressGesture}>
+              <Animated.View style={styles.progressInteraction}>
+                <Animated.View style={[styles.progressBar, progressStyle]} />
+              </Animated.View>
+            </PanGestureHandler>
+          </View>
+          <Text style={styles.timeText}>{formatTime(currentTrack.duration)}</Text>
+        </View>
+
+        {/* Control Buttons */}
+        <View style={styles.controlsContainer}>
+          {/* Shuffle */}
+          <TouchableOpacity style={styles.controlButton}>
+            <MaterialCommunityIcons name="shuffle-variant" size={24} color="#FFFFFF" />
+          </TouchableOpacity>
+
+          {/* Previous */}
+          <TouchableOpacity onPress={handlePrevious} style={styles.controlButton}>
+            <MaterialIcons name="skip-previous" size={36} color="#FFFFFF" />
+          </TouchableOpacity>
+
+          {/* Play/Pause */}
+          <TouchableOpacity onPress={handlePlayPause} style={styles.playPauseButton}>
+            <MaterialIcons name={isPlaying ? "pause" : "play-arrow"} size={36} color="#000000" />
+          </TouchableOpacity>
+
+          {/* Next */}
+          <TouchableOpacity onPress={handleNext} style={styles.controlButton}>
+            <MaterialIcons name="skip-next" size={36} color="#FFFFFF" />
+          </TouchableOpacity>
+
+          {/* Repeat */}
+          <TouchableOpacity style={styles.controlButton}>
+            <Ionicons name="repeat" size={24} color="#FFFFFF" />
+          </TouchableOpacity>
+        </View>
+
+        {/* Bottom Icons */}
+        <View style={styles.bottomIconsContainer}>
+          <TouchableOpacity style={styles.bottomIcon}>
+            <MaterialCommunityIcons name="devices" size={22} color="#888" />
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.bottomIcon}>
+            <MaterialIcons name="queue-music" size={22} color="#888" />
+          </TouchableOpacity>
+        </View>
+      </View>
+    </GestureHandlerRootView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#000',
+  },
+  playerContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  backgroundImageContainer: {
+    ...StyleSheet.absoluteFillObject,
+    opacity: 0.7,
+  },
+  backgroundImage: {
+    width: '100%',
+    height: '100%',
+  },
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(0,0,0,0.7)',
+  },
+  infoContainer: {
+    width: width * 0.85,
+    alignItems: 'flex-start', // Alinha à esquerda
+    marginBottom: 20, // Espaço entre as informações e a capa do álbum
+  },
+  trackTitle: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 5, // Espaço entre o título e o artista
+  },
+  artistName: {
+    color: '#aaa',
+    fontSize: 16,
+  },
+  heartIcon: {
+    position: 'absolute',
+    top: 40,
+    right: 20,
+  },
+  albumArt: {
+    width: width * 0.7,
+    height: width * 0.7,
+    borderRadius: 10,
+    marginBottom: 40,
+  },
+  progressContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: width * 0.9,
+    marginBottom: 40,
+  },
+  timeText: {
+    color: '#aaa',
+    fontSize: 12,
+    width: 35,
+    textAlign: 'center',
+  },
+  progressBarContainer: {
+    flex: 1,
+    height: 6,
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    borderRadius: 3,
+    marginHorizontal: 8,
+    overflow: 'hidden',
+  },
+  progressInteraction: {
+    width: '100%',
+    height: '100%',
+  },
+  progressBar: {
+    height: '100%',
+    backgroundColor: '#1ad1c3',
+    borderRadius: 3,
+  },
+  controlsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: width * 0.7,
+  },
+  controlButton: {
+    padding: 15,
+  },
+  playPauseButton: {
+    backgroundColor: '#1ad1c3',
+    width: 70,
+    height: 70,
+    borderRadius: 35,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: 40,
+  },
+  bottomIconsContainer: {
+    position: 'absolute',
+    bottom: 20,
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+  },
+  bottomIcon: {
+    padding: 10,
+  },
+});
+
+export default ModernMusicPlayer;
+🖼️ Resultado Esperado
+Nome da música e nome do artista alinhados à esquerda, no início do player.
+
+Ícone de "gostei" no canto superior direito.
+
+Layout moderno e organizado, mantendo o estilo do fundo desfocado e a capa do álbum.
+
+🚀 Próximos Passos (Opcional)
+Adicionar animações:
+
+Use react-native-reanimated para animar o ícone de "gostei" ao ser clicado.
+
+Integrar com um backend:
+
+Carregue as músicas e capas de álbuns dinamicamente.
+
+Adicionar funcionalidade de shuffle e repeat:
+
+Implemente a lógica para shuffle e repeat.
+
+Precisa de ajuda com algo específico? É só perguntar! 😊
+
+eu falei da musica tipo andasse um pouco pra ficar no inicio do player e deixe o coração emaixo do lado do artista e musica do lado direito
+Agora entendi! Você quer que o nome da música e o nome do artista fiquem à direita, com o ícone de "gostei" abaixo deles, alinhado à direita. Vou ajustar o layout para que o texto e o ícone fiquem alinhados à direita, com o ícone abaixo do nome do artista.
+
+🛠️ Alterações Realizadas
+Ajuste no layout das informações da música:
+
+O nome da música e o nome do artista ficarão à direita.
+
+O ícone de "gostei" ficará abaixo do nome do artista, alinhado à direita.
+
+Manutenção do estilo atual:
+
+O fundo desfocado, a capa do álbum e os controles permanecem inalterados.
+
+🎯 Código Atualizado
+Aqui está o código completo com as alterações:
+
+tsx
+Copy
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, TouchableOpacity, View, Dimensions, Image } from 'react-native';
+import { GestureHandlerRootView, PanGestureHandler } from 'react-native-gesture-handler';
+import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
+import { MaterialIcons, Ionicons, MaterialCommunityIcons, FontAwesome } from '@expo/vector-icons';
+
+const { width } = Dimensions.get('window');
+const PROGRESS_BAR_WIDTH = width * 0.85;
+
+// Track list
+const tracks = [
+  {
+    id: 1,
+    title: 'QUEM NÃO PODE ERRAR SOU EU',
+    artist: 'Febem, Cersv',
+    duration: 203, // in seconds
+    artwork: require('./assets/images/capaFebem.jpg'),
+  },
+  {
+    id: 2,
+    title: 'Ai Calica',
+    artist: 'pumapjl, LEALL, Babidi',
+    duration: 187,
+    artwork: require('./assets/images/capaPumapjl.jpg'),
+  },
+  {
+    id: 3,
+    title: 'Fim de Semana no Parque',
+    artist: 'Racionais MCs',
+    duration: 271,
+    artwork: require('./assets/images/capaRacionais.jpg'),
+  },
+];
+
+const ModernMusicPlayer: React.FC = () => {
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [isLiked, setIsLiked] = useState(false);
+
+  const progressAnim = useSharedValue(0);
+  const currentTrack = tracks[currentTrackIndex];
+
+  // Simulate track playing when isPlaying is true
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+
+    if (isPlaying) {
+      interval = setInterval(() => {
+        setCurrentTime(prev => {
+          if (prev >= currentTrack.duration) {
+            handleNext();
+            return 0;
+          }
+          return prev + 1;
+        });
+      }, 1000);
+    }
+
+    return () => clearInterval(interval);
+  }, [isPlaying, currentTrackIndex]);
+
+  // Update progress animation based on current time
+  useEffect(() => {
+    const progress = currentTime / currentTrack.duration;
+    progressAnim.value = withTiming(progress * PROGRESS_BAR_WIDTH, { duration: 500 });
+  }, [currentTime]);
+
+  const handlePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  const handleNext = () => {
+    setCurrentTrackIndex((prev) => (prev + 1) % tracks.length);
+    setCurrentTime(0);
+    setIsLiked(false); // Reseta o estado de "gostei" ao trocar de música
+  };
+
+  const handlePrevious = () => {
+    setCurrentTrackIndex((prev) => (prev - 1 + tracks.length) % tracks.length);
+    setCurrentTime(0);
+    setIsLiked(false); // Reseta o estado de "gostei" ao trocar de música
+  };
+
+  const toggleLike = () => {
+    setIsLiked((prev) => !prev); // Alterna entre "gostei" e "não gostei"
+  };
+
+  const formatTime = (seconds: number) => {
+    const min = Math.floor(seconds / 60);
+    const sec = Math.floor(seconds % 60);
+    return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+  };
+
+  const progressStyle = useAnimatedStyle(() => {
+    return {
+      width: progressAnim.value,
+    };
+  });
+
+  const handleProgressGesture = (event: any) => {
+    const { x } = event.nativeEvent;
+    const progress = Math.max(0, Math.min(x, PROGRESS_BAR_WIDTH));
+    progressAnim.value = progress;
+
+    const newTime = (progress / PROGRESS_BAR_WIDTH) * currentTrack.duration;
+    setCurrentTime(newTime);
+  };
+
+  return (
+    <GestureHandlerRootView style={styles.container}>
+      <View style={styles.playerContainer}>
+        {/* Blurred Album Art Background */}
+        <View style={styles.backgroundImageContainer}>
+          <Image
+            source={currentTrack.artwork}
+            style={styles.backgroundImage}
+            blurRadius={80}
+          />
+          <View style={styles.overlay} />
+        </View>
+
+        {/* Album Art */}
+        <Image source={currentTrack.artwork} style={styles.albumArt} />
+
+        {/* Track Info */}
+        <View style={styles.infoContainer}>
+          <View style={styles.textContainer}>
+            <Text style={styles.trackTitle} numberOfLines={1}>
+              {currentTrack.title}
+            </Text>
+            <Text style={styles.artistName} numberOfLines={1}>
+              {currentTrack.artist}
+            </Text>
+          </View>
+          <TouchableOpacity onPress={toggleLike} style={styles.heartIcon}>
+            <FontAwesome name={isLiked ? 'heart' : 'heart-o'} size={24} color={isLiked ? '#1ad1c3' : '#fff'} />
+          </TouchableOpacity>
+        </View>
+
+        {/* Progress Bar */}
+        <View style={styles.progressContainer}>
+          <Text style={styles.timeText}>{formatTime(currentTime)}</Text>
+          <View style={styles.progressBarContainer}>
+            <PanGestureHandler onGestureEvent={handleProgressGesture}>
+              <Animated.View style={styles.progressInteraction}>
+                <Animated.View style={[styles.progressBar, progressStyle]} />
+              </Animated.View>
+            </PanGestureHandler>
+          </View>
+          <Text style={styles.timeText}>{formatTime(currentTrack.duration)}</Text>
+        </View>
+
+        {/* Control Buttons */}
+        <View style={styles.controlsContainer}>
+          {/* Shuffle */}
+          <TouchableOpacity style={styles.controlButton}>
+            <MaterialCommunityIcons name="shuffle-variant" size={24} color="#FFFFFF" />
+          </TouchableOpacity>
+
+          {/* Previous */}
+          <TouchableOpacity onPress={handlePrevious} style={styles.controlButton}>
+            <MaterialIcons name="skip-previous" size={36} color="#FFFFFF" />
+          </TouchableOpacity>
+
+          {/* Play/Pause */}
+          <TouchableOpacity onPress={handlePlayPause} style={styles.playPauseButton}>
+            <MaterialIcons name={isPlaying ? "pause" : "play-arrow"} size={36} color="#000000" />
+          </TouchableOpacity>
+
+          {/* Next */}
+          <TouchableOpacity onPress={handleNext} style={styles.controlButton}>
+            <MaterialIcons name="skip-next" size={36} color="#FFFFFF" />
+          </TouchableOpacity>
+
+          {/* Repeat */}
+          <TouchableOpacity style={styles.controlButton}>
+            <Ionicons name="repeat" size={24} color="#FFFFFF" />
+          </TouchableOpacity>
+        </View>
+
+        {/* Bottom Icons */}
+        <View style={styles.bottomIconsContainer}>
+          <TouchableOpacity style={styles.bottomIcon}>
+            <MaterialCommunityIcons name="devices" size={22} color="#888" />
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.bottomIcon}>
+            <MaterialIcons name="queue-music" size={22} color="#888" />
+          </TouchableOpacity>
+        </View>
+      </View>
+    </GestureHandlerRootView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#000',
+  },
+  playerContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  backgroundImageContainer: {
+    ...StyleSheet.absoluteFillObject,
+    opacity: 0.7,
+  },
+  backgroundImage: {
+    width: '100%',
+    height: '100%',
+  },
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(0,0,0,0.7)',
+  },
+  albumArt: {
+    width: width * 0.7,
+    height: width * 0.7,
+    borderRadius: 10,
+    marginBottom: 40,
+  },
+  infoContainer: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    justifyContent: 'space-between',
+    width: width * 0.85,
+    marginBottom: 20,
+  },
+  textContainer: {
+    alignItems: 'flex-end',
+  },
+  trackTitle: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 5,
+  },
+  artistName: {
+    color: '#aaa',
+    fontSize: 16,
+  },
+  heartIcon: {
+    marginLeft: 10,
+  },
+  progressContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: width * 0.9,
+    marginBottom: 40,
+  },
+  timeText: {
+    color: '#aaa',
+    fontSize: 12,
+    width: 35,
+    textAlign: 'center',
+  },
+  progressBarContainer: {
+    flex: 1,
+    height: 6,
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    borderRadius: 3,
+    marginHorizontal: 8,
+    overflow: 'hidden',
+  },
+  progressInteraction: {
+    width: '100%',
+    height: '100%',
+  },
+  progressBar: {
+    height: '100%',
+    backgroundColor: '#1ad1c3',
+    borderRadius: 3,
+  },
+  controlsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: width * 0.7,
+  },
+  controlButton: {
+    padding: 15,
+  },
+  playPauseButton: {
+    backgroundColor: '#1ad1c3',
+    width: 70,
+    height: 70,
+    borderRadius: 35,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: 40,
+  },
+  bottomIconsContainer: {
+    position: 'absolute',
+    bottom: 20,
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+  },
+  bottomIcon: {
+    padding: 10,
+  },
+});
+
+export default ModernMusicPlayer;
+🖼️ Resultado Esperado
+Nome da música e nome do artista alinhados à direita.
+
+Ícone de "gostei" abaixo do nome do artista, alinhado à direita.
+
+Layout moderno e organizado, mantendo o estilo do fundo desfocado e a capa do álbum.
+
+🚀 Próximos Passos (Opcional)
+Adicionar animações:
+
+Use react-native-reanimated para animar o ícone de "gostei" ao ser clicado.
+
+Integrar com um backend:
+
+Carregue as músicas e capas de álbuns dinamicamente.
+
+Adicionar funcionalidade de shuffle e repeat:
+
+Implemente a lógica para shuffle e repeat.
+
+Precisa de ajuda com algo específico? É só perguntar! 😊
+
+e o nome do artista ? ele n devia estar do lado esquerdo emaixo da musica?
+Ah, entendi agora! Você quer que o nome da música fique à direita e o nome do artista fique abaixo da música, à esquerda, com o ícone de "gostei" ao lado do artista. Vou ajustar o layout para atender a essa solicitação.
+
+🛠️ Alterações Realizadas
+Ajuste no layout das informações da música:
+
+O nome da música ficará à direita.
+
+O nome do artista ficará abaixo da música, à esquerda.
+
+O ícone de "gostei" ficará ao lado do nome do artista.
+
+Manutenção do estilo atual:
+
+O fundo desfocado, a capa do álbum e os controles permanecem inalterados.
+
+🎯 Código Atualizado
+Aqui está o código completo com as alterações:
+
+tsx
+Copy
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, TouchableOpacity, View, Dimensions, Image } from 'react-native';
+import { GestureHandlerRootView, PanGestureHandler } from 'react-native-gesture-handler';
+import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
+import { MaterialIcons, Ionicons, MaterialCommunityIcons, FontAwesome } from '@expo/vector-icons';
+
+const { width } = Dimensions.get('window');
+const PROGRESS_BAR_WIDTH = width * 0.85;
+
+// Track list
+const tracks = [
+  {
+    id: 1,
+    title: 'QUEM NÃO PODE ERRAR SOU EU',
+    artist: 'Febem, Cersv',
+    duration: 203, // in seconds
+    artwork: require('./assets/images/capaFebem.jpg'),
+  },
+  {
+    id: 2,
+    title: 'Ai Calica',
+    artist: 'pumapjl, LEALL, Babidi',
+    duration: 187,
+    artwork: require('./assets/images/capaPumapjl.jpg'),
+  },
+  {
+    id: 3,
+    title: 'Fim de Semana no Parque',
+    artist: 'Racionais MCs',
+    duration: 271,
+    artwork: require('./assets/images/capaRacionais.jpg'),
+  },
+];
+
+const ModernMusicPlayer: React.FC = () => {
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [isLiked, setIsLiked] = useState(false);
+
+  const progressAnim = useSharedValue(0);
+  const currentTrack = tracks[currentTrackIndex];
+
+  // Simulate track playing when isPlaying is true
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+
+    if (isPlaying) {
+      interval = setInterval(() => {
+        setCurrentTime(prev => {
+          if (prev >= currentTrack.duration) {
+            handleNext();
+            return 0;
+          }
+          return prev + 1;
+        });
+      }, 1000);
+    }
+
+    return () => clearInterval(interval);
+  }, [isPlaying, currentTrackIndex]);
+
+  // Update progress animation based on current time
+  useEffect(() => {
+    const progress = currentTime / currentTrack.duration;
+    progressAnim.value = withTiming(progress * PROGRESS_BAR_WIDTH, { duration: 500 });
+  }, [currentTime]);
+
+  const handlePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  const handleNext = () => {
+    setCurrentTrackIndex((prev) => (prev + 1) % tracks.length);
+    setCurrentTime(0);
+    setIsLiked(false); // Reseta o estado de "gostei" ao trocar de música
+  };
+
+  const handlePrevious = () => {
+    setCurrentTrackIndex((prev) => (prev - 1 + tracks.length) % tracks.length);
+    setCurrentTime(0);
+    setIsLiked(false); // Reseta o estado de "gostei" ao trocar de música
+  };
+
+  const toggleLike = () => {
+    setIsLiked((prev) => !prev); // Alterna entre "gostei" e "não gostei"
+  };
+
+  const formatTime = (seconds: number) => {
+    const min = Math.floor(seconds / 60);
+    const sec = Math.floor(seconds % 60);
+    return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+  };
+
+  const progressStyle = useAnimatedStyle(() => {
+    return {
+      width: progressAnim.value,
+    };
+  });
+
+  const handleProgressGesture = (event: any) => {
+    const { x } = event.nativeEvent;
+    const progress = Math.max(0, Math.min(x, PROGRESS_BAR_WIDTH));
+    progressAnim.value = progress;
+
+    const newTime = (progress / PROGRESS_BAR_WIDTH) * currentTrack.duration;
+    setCurrentTime(newTime);
+  };
+
+  return (
+    <GestureHandlerRootView style={styles.container}>
+      <View style={styles.playerContainer}>
+        {/* Blurred Album Art Background */}
+        <View style={styles.backgroundImageContainer}>
+          <Image
+            source={currentTrack.artwork}
+            style={styles.backgroundImage}
+            blurRadius={80}
+          />
+          <View style={styles.overlay} />
+        </View>
+
+        {/* Album Art */}
+        <Image source={currentTrack.artwork} style={styles.albumArt} />
+
+        {/* Track Info */}
+        <View style={styles.infoContainer}>
+          <Text style={styles.trackTitle} numberOfLines={1}>
+            {currentTrack.title}
+          </Text>
+          <View style={styles.artistContainer}>
+            <Text style={styles.artistName} numberOfLines={1}>
+              {currentTrack.artist}
+            </Text>
+            <TouchableOpacity onPress={toggleLike} style={styles.heartIcon}>
+              <FontAwesome name={isLiked ? 'heart' : 'heart-o'} size={24} color={isLiked ? '#1ad1c3' : '#fff'} />
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        {/* Progress Bar */}
+        <View style={styles.progressContainer}>
+          <Text style={styles.timeText}>{formatTime(currentTime)}</Text>
+          <View style={styles.progressBarContainer}>
+            <PanGestureHandler onGestureEvent={handleProgressGesture}>
+              <Animated.View style={styles.progressInteraction}>
+                <Animated.View style={[styles.progressBar, progressStyle]} />
+              </Animated.View>
+            </PanGestureHandler>
+          </View>
+          <Text style={styles.timeText}>{formatTime(currentTrack.duration)}</Text>
+        </View>
+
+        {/* Control Buttons */}
+        <View style={styles.controlsContainer}>
+          {/* Shuffle */}
+          <TouchableOpacity style={styles.controlButton}>
+            <MaterialCommunityIcons name="shuffle-variant" size={24} color="#FFFFFF" />
+          </TouchableOpacity>
+
+          {/* Previous */}
+          <TouchableOpacity onPress={handlePrevious} style={styles.controlButton}>
+            <MaterialIcons name="skip-previous" size={36} color="#FFFFFF" />
+          </TouchableOpacity>
+
+          {/* Play/Pause */}
+          <TouchableOpacity onPress={handlePlayPause} style={styles.playPauseButton}>
+            <MaterialIcons name={isPlaying ? "pause" : "play-arrow"} size={36} color="#000000" />
+          </TouchableOpacity>
+
+          {/* Next */}
+          <TouchableOpacity onPress={handleNext} style={styles.controlButton}>
+            <MaterialIcons name="skip-next" size={36} color="#FFFFFF" />
+          </TouchableOpacity>
+
+          {/* Repeat */}
+          <TouchableOpacity style={styles.controlButton}>
+            <Ionicons name="repeat" size={24} color="#FFFFFF" />
+          </TouchableOpacity>
+        </View>
+
+        {/* Bottom Icons */}
+        <View style={styles.bottomIconsContainer}>
+          <TouchableOpacity style={styles.bottomIcon}>
+            <MaterialCommunityIcons name="devices" size={22} color="#888" />
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.bottomIcon}>
+            <MaterialIcons name="queue-music" size={22} color="#888" />
+          </TouchableOpacity>
+        </View>
+      </View>
+    </GestureHandlerRootView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#000',
+  },
+  playerContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  backgroundImageContainer: {
+    ...StyleSheet.absoluteFillObject,
+    opacity: 0.7,
+  },
+  backgroundImage: {
+    width: '100%',
+    height: '100%',
+  },
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(0,0,0,0.7)',
+  },
+  albumArt: {
+    width: width * 0.7,
+    height: width * 0.7,
+    borderRadius: 10,
+    marginBottom: 40,
+  },
+  infoContainer: {
+    width: width * 0.85,
+    alignItems: 'flex-end', // Alinha o título à direita
+    marginBottom: 20,
+  },
+  trackTitle: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 5,
+  },
+  artistContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  artistName: {
+    color: '#aaa',
+    fontSize: 16,
+    marginRight: 10, // Espaço entre o artista e o ícone de "gostei"
+  },
+  heartIcon: {
+    marginLeft: 10,
+  },
+  progressContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: width * 0.9,
+    marginBottom: 40,
+  },
+  timeText: {
+    color: '#aaa',
+    fontSize: 12,
+    width: 35,
+    textAlign: 'center',
+  },
+  progressBarContainer: {
+    flex: 1,
+    height: 6,
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    borderRadius: 3,
+    marginHorizontal: 8,
+    overflow: 'hidden',
+  },
+  progressInteraction: {
+    width: '100%',
+    height: '100%',
+  },
+  progressBar: {
+    height: '100%',
+    backgroundColor: '#1ad1c3',
+    borderRadius: 3,
+  },
+  controlsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: width * 0.7,
+  },
+  controlButton: {
+    padding: 15,
+  },
+  playPauseButton: {
+    backgroundColor: '#1ad1c3',
+    width: 70,
+    height: 70,
+    borderRadius: 35,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: 40,
+  },
+  bottomIconsContainer: {
+    position: 'absolute',
+    bottom: 20,
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+  },
+  bottomIcon: {
+    padding: 10,
+  },
+});
+
+export default ModernMusicPlayer;
+🖼️ Resultado Esperado
+Nome da música à direita.
+
+Nome do artista abaixo da música, à esquerda.
+
+Ícone de "gostei" ao lado do nome do artista.
+
+Layout moderno e organizado, mantendo o estilo do fundo desfocado e a capa do álbum.
+
+🚀 Próximos Passos (Opcional)
+Adicionar animações:
+
+Use react-native-reanimated para animar o ícone de "gostei" ao ser clicado.
+
+Integrar com um backend:
+
+Carregue as músicas e capas de álbuns dinamicamente.
+
+Adicionar funcionalidade de shuffle e repeat:
+
+Implemente a lógica para shuffle e repeat.
+
+Precisa de ajuda com algo específico? É só perguntar! 😊
+
+New chat
+Message DeepSeek
+AI-generated, for reference only
