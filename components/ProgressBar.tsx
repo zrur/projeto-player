@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { PanGestureHandler, GestureHandlerGestureEvent } from 'react-native-gesture-handler';
 import Animated, { useAnimatedStyle, useSharedValue, withTiming, cancelAnimation } from 'react-native-reanimated';
+import { formatTime } from '../utils/formatTime';
 
 interface ProgressBarProps {
   currentTime: number;
@@ -49,17 +50,12 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ currentTime, duration, isPlay
       <PanGestureHandler onGestureEvent={handlePanGesture} onBegan={handlePanStart} onEnded={handlePanEnd}>
         <Animated.View style={styles.progressBarContainer}>
           <Animated.View style={[styles.progressBar, progressStyle]} />
+          <Animated.View style={[styles.progressKnob, { left: progressAnim.value - 6 }]} />
         </Animated.View>
       </PanGestureHandler>
       <Text style={styles.timeText}>{formatTime(duration)}</Text>
     </View>
   );
-};
-
-const formatTime = (seconds: number) => {
-  const min = Math.floor(seconds / 60);
-  const sec = Math.floor(seconds % 60);
-  return `${min}:${sec < 10 ? '0' : ''}${sec}`;
 };
 
 const styles = StyleSheet.create({
@@ -82,12 +78,25 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255,255,255,0.1)',
     borderRadius: 3,
     marginHorizontal: 8,
-    overflow: 'hidden',
+    overflow: 'visible',
   },
   progressBar: {
     height: '100%',
     backgroundColor: '#1ad1c3',
     borderRadius: 3,
+  },
+  progressKnob: {
+    position: 'absolute',
+    width: 12,
+    height: 12,
+    borderRadius: 6,
+    backgroundColor: '#1ad1c3',
+    top: -3,
+    shadowColor: '#1ad1c3',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.5,
+    shadowRadius: 4,
+    elevation: 4,
   },
 });
 

@@ -25,7 +25,11 @@ const Controls: React.FC<ControlsProps> = ({
 }) => (
   <View style={styles.container}>
     <TouchableOpacity onPress={onShuffle} style={styles.button}>
-      <MaterialCommunityIcons name="shuffle-variant" size={24} color={isShuffled ? '#1ad1c3' : '#fff'} />
+      <MaterialCommunityIcons 
+        name="shuffle-variant" 
+        size={24} 
+        color={isShuffled ? '#1ad1c3' : '#fff'} 
+      />
     </TouchableOpacity>
     <TouchableOpacity onPress={onPrevious} style={styles.button}>
       <MaterialIcons name="skip-previous" size={36} color="#fff" />
@@ -47,7 +51,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '70%',
+    width: '85%',
+    marginBottom: 20,
   },
   button: {
     padding: 15,
@@ -59,7 +64,12 @@ const styles = StyleSheet.create({
     borderRadius: 35,
     alignItems: 'center',
     justifyContent: 'center',
-    marginHorizontal: 40,
+    marginHorizontal: 20,
+    shadowColor: '#1ad1c3',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.5,
+    shadowRadius: 8,
+    elevation: 8,
   },
 });
 

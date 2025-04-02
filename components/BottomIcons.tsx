@@ -1,29 +1,58 @@
 import React from 'react';
-import { View, TouchableOpacity, StyleSheet } from 'react-native';
-import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
+import { View, TouchableOpacity, StyleSheet, Text } from 'react-native';
+import { MaterialIcons, FontAwesome } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
-const BottomIcons: React.FC = () => (
-  <View style={styles.container}>
-    <TouchableOpacity style={styles.icon}>
-      <MaterialCommunityIcons name="devices" size={22} color="#888" />
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.icon}>
-      <MaterialIcons name="queue-music" size={22} color="#888" />
-    </TouchableOpacity>
-  </View>
-);
+const BottomIcons: React.FC = () => {
+  const navigation = useNavigation();
+
+  return (
+    <View style={styles.container}>
+      <TouchableOpacity 
+        style={styles.iconButton}
+        onPress={() => navigation.navigate('Home')}
+      >
+        <MaterialIcons name="home" size={24} color="#888" />
+        <Text style={styles.iconText}>Início</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity 
+        style={styles.iconButton}
+        onPress={() => navigation.navigate('Favorites')}
+      >
+        <FontAwesome name="heart" size={24} color="#888" />
+        <Text style={styles.iconText}>Favoritos</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.iconButton}>
+        <MaterialIcons name="queue-music" size={24} color="#888" />
+        <Text style={styles.iconText}>Playlist</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    bottom: 20,
+    bottom: 0,
     width: '100%',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
+    paddingVertical: 10,
     paddingHorizontal: 20,
+    backgroundColor: 'rgba(20,20,20,0.9)',
+    borderTopWidth: 1,
+    borderTopColor: '#333',
   },
-  icon: {
+  iconButton: {
+    alignItems: 'center',
     padding: 10,
+  },
+  iconText: {
+    color: '#777',
+    fontSize: 12,
+    marginTop: 4,
   },
 });
 
