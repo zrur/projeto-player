@@ -22,7 +22,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icone.png",
-        "backgroundColor": "#000000"
+        "backgroundColor": "#e8dfdf"
       },
       "package": "com.zrur.musicplayer",
       "permissions": [
