@@ -1,23 +1,36 @@
 {
   "expo": {
-    "name": "MusicPlayerApp",
+    "name": "Music Player",
     "slug": "MusicPlayerApp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/images/icone.png",
+    "userInterfaceStyle": "dark",
     "newArchEnabled": true,
     "splash": {
+      "image": "./assets/images/icone.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.zrur.musicplayer"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/images/icone.png",
+        "backgroundColor": "#000000"
       },
-      "package": "com.zrur.MusicPlayerApp"
+      "package": "com.zrur.musicplayer",
+      "permissions": [
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.FOREGROUND_SERVICE"
+      ]
     },
     "extra": {
       "eas": {

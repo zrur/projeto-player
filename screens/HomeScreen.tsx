@@ -9,6 +9,7 @@ import TrackList from '../components/TrackList';
 import { usePlayer } from '../contexts/PlayerContext';
 import { tracks } from '../utils/trackData';
 
+
 const HomeScreen: React.FC = () => {
   const {
     currentTrack,
